@@ -1,0 +1,7 @@
+/home/karthik/llvm-project/pass/build/CMakeFiles/intrinsics_gen.dir
+/home/karthik/llvm-project/pass/build/CMakeFiles/omp_gen.dir
+/home/karthik/llvm-project/pass/build/CMakeFiles/acc_gen.dir
+/home/karthik/llvm-project/pass/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/home/karthik/llvm-project/pass/build/CMakeFiles/WeightedFreqPass.dir
+/home/karthik/llvm-project/pass/build/CMakeFiles/edit_cache.dir
+/home/karthik/llvm-project/pass/build/CMakeFiles/rebuild_cache.dir

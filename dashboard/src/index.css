@@ -1,0 +1,39 @@
+@import '@xyflow/react/dist/style.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    background: #0d1117;
+    color: #e5e7eb;
+}
+
+input,
+textarea,
+select,
+option {
+    color: #e5e7eb;
+    background-color: #0d1117;
+}
+
+::placeholder {
+    color: #a3aab3;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 3px;
+}
