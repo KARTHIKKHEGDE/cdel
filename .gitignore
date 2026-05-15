@@ -1,0 +1,37 @@
+# Build artifacts
+/build/
+**/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/CMakeConfigureLog.yaml
+**/CTestTestfile.cmake
+
+# Compiler outputs
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Generated files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Node/Vite
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vite/
+**/.vite/
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
