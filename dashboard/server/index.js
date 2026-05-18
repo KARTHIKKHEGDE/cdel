@@ -13,7 +13,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.resolve(__dirname, '..', '..')
 const passDir = path.join(rootDir, 'pass')
 const pluginPath = path.join(passDir, 'output', 'libWeightedFreqPass.so')
-const port = Number(process.env.WIFA_PORT || 5174)
+const port = Number(process.env.WIFA_PORT || 3001)
 
 function runCommand(command, args, options = {}) {
     return new Promise((resolve, reject) => {
