@@ -1,4 +1,331 @@
 {
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "fill",
+        "caller": "main"
+      },
+      {
+        "callee": "sum_diagonal",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "fill",
+      "sum_diagonal",
+      "main"
+    ]
+  },
+  "cfg": {
+    "fill": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 3,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 14,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "mul",
+            "load",
+            "add",
+            "load",
+            "add",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 1,
+          "label": "bb6",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 1,
+          "label": "bb8",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "call",
+            "call",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "sum_diagonal": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 5,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 11,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 2,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call"
+    ],
+    "bottleneck_score": 30.0,
+    "memory_pressure_score": 118.0,
+    "per_function": {
+      "fill": {
+        "execution_estimate": 85.0,
+        "memory_pressure": 65.0
+      },
+      "main": {
+        "execution_estimate": 36.0,
+        "memory_pressure": 5.0
+      },
+      "sum_diagonal": {
+        "execution_estimate": 58.0,
+        "memory_pressure": 48.0
+      }
+    },
+    "total_execution_estimate": 179.0
+  },
+  "cyclomatic_complexity": {
+    "fill": {
+      "complexity": 3,
+      "components": 1,
+      "edges": 10,
+      "nodes": 9
+    },
+    "main": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "sum_diagonal": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 5,
+      "nodes": 5
+    }
+  },
   "functions": [
     {
       "basic_blocks": 9,
@@ -61,7 +388,130 @@
     "sext": 4,
     "store": 11
   },
+  "loops": {
+    "fill": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 31,
+        "is_innermost": false,
+        "weighted_score": 52.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 21,
+        "is_innermost": true,
+        "weighted_score": 36.0
+      }
+    ],
+    "main": [],
+    "sum_diagonal": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 18,
+        "is_innermost": true,
+        "weighted_score": 30.0
+      }
+    ]
+  },
   "module": "/home/karthik/llvm-project/pass/ir_files/loops.ll",
+  "opcode_sequence": {
+    "fill": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "mul",
+      "load",
+      "add",
+      "load",
+      "add",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "ret"
+    ],
+    "main": [
+      "alloca",
+      "store",
+      "call",
+      "call",
+      "call",
+      "ret"
+    ],
+    "sum_diagonal": [
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ]
+  },
   "total_instructions": 69,
   "weighted_score": 140.0
 }

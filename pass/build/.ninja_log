@@ -1,13 +1,15 @@
 # ninja log v5
-3	1085	1778829952670332507	/home/karthik/llvm-project/pass/output/libWeightedFreqPass.so	605b918a9895ffe7
-0	6907	1778829878087162995	CMakeFiles/WeightedFreqPass.dir/src/WeightedFreqPass.cpp.o	561f3bd01eea45e1
-0	4555	1778829875734465190	CMakeFiles/WeightedFreqPass.dir/src/WeightConfig.cpp.o	a851bf6850b8ea0a
-4	7082	1778861706940267601	build.ninja	f3b8e6a506eb1efe
-3	1708	1778861708660266896	CMakeFiles/WeightedFreqPass.dir/src/CFGAnalyzer.cpp.o	158ec820fa0bf1fe
-3	2029	1778861708980266764	CMakeFiles/WeightedFreqPass.dir/src/CallGraphAnalyzer.cpp.o	bf8e0756dbe4b97c
-4	2051	1778861709010266751	CMakeFiles/WeightedFreqPass.dir/src/CostModel.cpp.o	1db03f28a3c09555
-3	2209	1778861709160266689	CMakeFiles/WeightedFreqPass.dir/src/DeadCodeDetector.cpp.o	9d895635b706d549
-3	4531	1778861711490267412	CMakeFiles/WeightedFreqPass.dir/src/WeightConfig.cpp.o	a851bf6850b8ea0a
-2	7182	1778861714130268492	CMakeFiles/WeightedFreqPass.dir/src/WeightedFreqPass.cpp.o	561f3bd01eea45e1
-2	4657	1778861775840241473	CMakeFiles/WeightedFreqPass.dir/src/LoopAnalyzer.cpp.o	823b710a919eb313
 4657	5742	1778861776920242305	/home/karthik/llvm-project/pass/output/libWeightedFreqPass.so	e7ad282b42a9d8ac
+2	7182	1778861714130268492	CMakeFiles/WeightedFreqPass.dir/src/WeightedFreqPass.cpp.o	561f3bd01eea45e1
+3	4531	1778861711490267412	CMakeFiles/WeightedFreqPass.dir/src/WeightConfig.cpp.o	a851bf6850b8ea0a
+4	7082	1779086696937673426	build.ninja	f3b8e6a506eb1efe
+3	1708	1778861708660266896	CMakeFiles/WeightedFreqPass.dir/src/CFGAnalyzer.cpp.o	158ec820fa0bf1fe
+4	2051	1778861709010266751	CMakeFiles/WeightedFreqPass.dir/src/CostModel.cpp.o	1db03f28a3c09555
+3	2029	1778861708980266764	CMakeFiles/WeightedFreqPass.dir/src/CallGraphAnalyzer.cpp.o	bf8e0756dbe4b97c
+3	2209	1778861709160266689	CMakeFiles/WeightedFreqPass.dir/src/DeadCodeDetector.cpp.o	9d895635b706d549
+2	4657	1778861775840241473	CMakeFiles/WeightedFreqPass.dir/src/LoopAnalyzer.cpp.o	823b710a919eb313
+26	1631	1779086698597673451	CMakeFiles/WeightedFreqPass.dir/src/CFGAnalyzer.cpp.o	158ec820fa0bf1fe
+26	4255	1779086701226445106	CMakeFiles/WeightedFreqPass.dir/src/LoopAnalyzer.cpp.o	823b710a919eb313
+25	4316	1779086701284791512	CMakeFiles/WeightedFreqPass.dir/src/WeightConfig.cpp.o	a851bf6850b8ea0a
+25	6742	1779086703706100919	CMakeFiles/WeightedFreqPass.dir/src/WeightedFreqPass.cpp.o	561f3bd01eea45e1
+6742	7633	1779086704596100932	/home/karthik/llvm-project/pass/output/libWeightedFreqPass.so	65640f991a902ac1

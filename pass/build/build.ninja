@@ -108,14 +108,6 @@ build CMakeFiles/WeightedFreqPass.dir/src/CallGraphAnalyzer.cpp.o: CXX_COMPILER_
   OBJECT_DIR = CMakeFiles/WeightedFreqPass.dir
   OBJECT_FILE_DIR = CMakeFiles/WeightedFreqPass.dir/src
 
-build CMakeFiles/WeightedFreqPass.dir/src/DeadCodeDetector.cpp.o: CXX_COMPILER__WeightedFreqPass_unscanned_ /home/karthik/llvm-project/pass/src/DeadCodeDetector.cpp || cmake_object_order_depends_target_WeightedFreqPass
-  DEFINES = -DWeightedFreqPass_EXPORTS
-  DEP_FILE = CMakeFiles/WeightedFreqPass.dir/src/DeadCodeDetector.cpp.o.d
-  FLAGS = -std=gnu++17 -fPIC   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
-  INCLUDES = -I/usr/lib/llvm-17/include -I/home/karthik/llvm-project/pass/include
-  OBJECT_DIR = CMakeFiles/WeightedFreqPass.dir
-  OBJECT_FILE_DIR = CMakeFiles/WeightedFreqPass.dir/src
-
 build CMakeFiles/WeightedFreqPass.dir/src/CostModel.cpp.o: CXX_COMPILER__WeightedFreqPass_unscanned_ /home/karthik/llvm-project/pass/src/CostModel.cpp || cmake_object_order_depends_target_WeightedFreqPass
   DEFINES = -DWeightedFreqPass_EXPORTS
   DEP_FILE = CMakeFiles/WeightedFreqPass.dir/src/CostModel.cpp.o.d
@@ -132,7 +124,7 @@ build CMakeFiles/WeightedFreqPass.dir/src/CostModel.cpp.o: CXX_COMPILER__Weighte
 #############################################
 # Link the shared module /home/karthik/llvm-project/pass/output/libWeightedFreqPass.so
 
-build /home/karthik/llvm-project/pass/output/libWeightedFreqPass.so: CXX_MODULE_LIBRARY_LINKER__WeightedFreqPass_ CMakeFiles/WeightedFreqPass.dir/src/WeightedFreqPass.cpp.o CMakeFiles/WeightedFreqPass.dir/src/WeightConfig.cpp.o CMakeFiles/WeightedFreqPass.dir/src/CFGAnalyzer.cpp.o CMakeFiles/WeightedFreqPass.dir/src/LoopAnalyzer.cpp.o CMakeFiles/WeightedFreqPass.dir/src/CallGraphAnalyzer.cpp.o CMakeFiles/WeightedFreqPass.dir/src/DeadCodeDetector.cpp.o CMakeFiles/WeightedFreqPass.dir/src/CostModel.cpp.o | /usr/lib/llvm-17/lib/libLLVM-17.so.1
+build /home/karthik/llvm-project/pass/output/libWeightedFreqPass.so: CXX_MODULE_LIBRARY_LINKER__WeightedFreqPass_ CMakeFiles/WeightedFreqPass.dir/src/WeightedFreqPass.cpp.o CMakeFiles/WeightedFreqPass.dir/src/WeightConfig.cpp.o CMakeFiles/WeightedFreqPass.dir/src/CFGAnalyzer.cpp.o CMakeFiles/WeightedFreqPass.dir/src/LoopAnalyzer.cpp.o CMakeFiles/WeightedFreqPass.dir/src/CallGraphAnalyzer.cpp.o CMakeFiles/WeightedFreqPass.dir/src/CostModel.cpp.o | /usr/lib/llvm-17/lib/libLLVM-17.so.1
   LINK_LIBRARIES = -Wl,-rpath,/usr/lib/llvm-17/lib  /usr/lib/llvm-17/lib/libLLVM-17.so.1
   OBJECT_DIR = CMakeFiles/WeightedFreqPass.dir
   POST_BUILD = :

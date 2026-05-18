@@ -41,6 +41,26 @@ int main(void) {
 `,
         },
         {
+            name: 'C sample - If/else check',
+            fileName: 'sample_check.c',
+            language: 'c',
+            code: `#include <stdio.h>
+
+int check(int x) {
+    if (x > 5) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main(void) {
+    printf("%d", check(10));
+    return 0;
+}
+`,
+        },
+        {
             name: 'C++ sample - Templates + recursion',
             fileName: 'sample_cpp.cpp',
             language: 'cpp',
