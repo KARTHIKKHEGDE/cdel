@@ -1,0 +1,222 @@
+{
+  "call_graph": {
+    "edges": [],
+    "nodes": [
+      "main"
+    ]
+  },
+  "cfg": {
+    "main": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 16,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "call",
+            "call",
+            "load",
+            "load",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 11,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "load",
+            "add",
+            "store",
+            "load",
+            "call",
+            "load",
+            "store",
+            "load",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 1,
+          "label": "bb4",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call"
+    ],
+    "bottleneck_score": 40.0,
+    "memory_pressure_score": 78.0,
+    "per_function": {
+      "main": {
+        "execution_estimate": 126.0,
+        "memory_pressure": 78.0
+      }
+    },
+    "total_execution_estimate": 126.0
+  },
+  "cyclomatic_complexity": {
+    "main": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 5,
+      "nodes": 5
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 5,
+      "instructions": {
+        "add": 2,
+        "alloca": 6,
+        "br": 4,
+        "call": 4,
+        "icmp": 1,
+        "load": 10,
+        "ret": 1,
+        "store": 8
+      },
+      "name": "main",
+      "total_instructions": 36,
+      "weighted_score": 98.0
+    }
+  ],
+  "instructions": {
+    "add": 2,
+    "alloca": 6,
+    "br": 4,
+    "call": 4,
+    "icmp": 1,
+    "load": 10,
+    "ret": 1,
+    "store": 8
+  },
+  "loops": {
+    "main": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 19,
+        "is_innermost": true,
+        "weighted_score": 44.0
+      }
+    ]
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test4.ll",
+  "opcode_sequence": {
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "call",
+      "call",
+      "load",
+      "load",
+      "call",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "add",
+      "store",
+      "load",
+      "call",
+      "load",
+      "store",
+      "load",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "ret"
+    ]
+  },
+  "total_instructions": 36,
+  "weighted_score": 98.0
+}

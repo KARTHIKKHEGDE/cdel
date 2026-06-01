@@ -1,0 +1,1905 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "matMultiply",
+        "caller": "main"
+      },
+      {
+        "callee": "matTranspose",
+        "caller": "main"
+      },
+      {
+        "callee": "matAdd",
+        "caller": "main"
+      },
+      {
+        "callee": "matScale",
+        "caller": "main"
+      },
+      {
+        "callee": "matTrace",
+        "caller": "main"
+      },
+      {
+        "callee": "det3x3",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "matMultiply",
+      "matTranspose",
+      "matTrace",
+      "det3x3",
+      "matAdd",
+      "matScale",
+      "main"
+    ]
+  },
+  "cfg": {
+    "det3x3": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 77,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "mul",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "mul",
+            "sub",
+            "mul",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "mul",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "mul",
+            "sub",
+            "mul",
+            "sub",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "mul",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "load",
+            "getelementptr",
+            "getelementptr",
+            "load",
+            "mul",
+            "sub",
+            "mul",
+            "add",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 12,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 3,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 24,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "load",
+            "add",
+            "srem",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "load",
+            "load",
+            "mul",
+            "add",
+            "srem",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 1,
+          "label": "bb6",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 28,
+          "label": "bb8",
+          "ops": [
+            "getelementptr",
+            "getelementptr",
+            "getelementptr",
+            "call",
+            "getelementptr",
+            "getelementptr",
+            "call",
+            "getelementptr",
+            "getelementptr",
+            "getelementptr",
+            "call",
+            "getelementptr",
+            "getelementptr",
+            "call",
+            "getelementptr",
+            "call",
+            "call",
+            "getelementptr",
+            "call",
+            "call",
+            "getelementptr",
+            "call",
+            "call",
+            "call",
+            "getelementptr",
+            "call",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "matAdd": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 10,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 3,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 26,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 1,
+          "label": "bb6",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 1,
+          "label": "bb8",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    },
+    "matMultiply": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb12",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb10",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb5",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb9",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb10",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 11,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 3,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 10,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 3,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 28,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "mul",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 1,
+          "label": "bb8",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 4,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 1,
+          "label": "bb10",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 4,
+          "label": "bb11",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 1,
+          "label": "bb12",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    },
+    "matScale": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 10,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 3,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 19,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "mul",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 1,
+          "label": "bb6",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 1,
+          "label": "bb8",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    },
+    "matTrace": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 7,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 13,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 2,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "matTranspose": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 8,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 3,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 17,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 1,
+          "label": "bb6",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 1,
+          "label": "bb8",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call",
+      "srem"
+    ],
+    "bottleneck_score": 170.0,
+    "memory_pressure_score": 729.0,
+    "per_function": {
+      "det3x3": {
+        "execution_estimate": 188.0,
+        "memory_pressure": 155.0
+      },
+      "main": {
+        "execution_estimate": 295.0,
+        "memory_pressure": 103.0
+      },
+      "matAdd": {
+        "execution_estimate": 123.0,
+        "memory_pressure": 103.0
+      },
+      "matMultiply": {
+        "execution_estimate": 173.0,
+        "memory_pressure": 142.0
+      },
+      "matScale": {
+        "execution_estimate": 109.0,
+        "memory_pressure": 89.0
+      },
+      "matTrace": {
+        "execution_estimate": 68.0,
+        "memory_pressure": 57.0
+      },
+      "matTranspose": {
+        "execution_estimate": 97.0,
+        "memory_pressure": 80.0
+      }
+    },
+    "total_execution_estimate": 1053.0
+  },
+  "cyclomatic_complexity": {
+    "det3x3": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "main": {
+      "complexity": 3,
+      "components": 1,
+      "edges": 10,
+      "nodes": 9
+    },
+    "matAdd": {
+      "complexity": 3,
+      "components": 1,
+      "edges": 10,
+      "nodes": 9
+    },
+    "matMultiply": {
+      "complexity": 4,
+      "components": 1,
+      "edges": 15,
+      "nodes": 13
+    },
+    "matScale": {
+      "complexity": 3,
+      "components": 1,
+      "edges": 10,
+      "nodes": 9
+    },
+    "matTrace": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 5,
+      "nodes": 5
+    },
+    "matTranspose": {
+      "complexity": 3,
+      "components": 1,
+      "edges": 10,
+      "nodes": 9
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 9,
+      "instructions": {
+        "add": 4,
+        "alloca": 9,
+        "br": 8,
+        "call": 13,
+        "getelementptr": 18,
+        "icmp": 2,
+        "load": 12,
+        "mul": 1,
+        "ret": 1,
+        "sext": 4,
+        "srem": 2,
+        "store": 7
+      },
+      "name": "main",
+      "total_instructions": 81,
+      "weighted_score": 252.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "add": 1,
+        "alloca": 1,
+        "getelementptr": 30,
+        "load": 30,
+        "mul": 9,
+        "ret": 1,
+        "store": 1,
+        "sub": 4
+      },
+      "name": "det3x3",
+      "total_instructions": 77,
+      "weighted_score": 157.0
+    },
+    {
+      "basic_blocks": 13,
+      "instructions": {
+        "add": 4,
+        "alloca": 6,
+        "br": 12,
+        "getelementptr": 8,
+        "icmp": 3,
+        "load": 21,
+        "mul": 1,
+        "ret": 1,
+        "sext": 8,
+        "store": 11
+      },
+      "name": "matMultiply",
+      "total_instructions": 75,
+      "weighted_score": 128.0
+    },
+    {
+      "basic_blocks": 9,
+      "instructions": {
+        "add": 3,
+        "alloca": 5,
+        "br": 8,
+        "getelementptr": 6,
+        "icmp": 2,
+        "load": 15,
+        "ret": 1,
+        "sext": 6,
+        "store": 8
+      },
+      "name": "matAdd",
+      "total_instructions": 54,
+      "weighted_score": 91.0
+    },
+    {
+      "basic_blocks": 9,
+      "instructions": {
+        "add": 2,
+        "alloca": 5,
+        "br": 8,
+        "getelementptr": 4,
+        "icmp": 2,
+        "load": 12,
+        "mul": 1,
+        "ret": 1,
+        "sext": 4,
+        "store": 8
+      },
+      "name": "matScale",
+      "total_instructions": 47,
+      "weighted_score": 81.0
+    },
+    {
+      "basic_blocks": 9,
+      "instructions": {
+        "add": 2,
+        "alloca": 4,
+        "br": 8,
+        "getelementptr": 4,
+        "icmp": 2,
+        "load": 11,
+        "ret": 1,
+        "sext": 4,
+        "store": 7
+      },
+      "name": "matTranspose",
+      "total_instructions": 43,
+      "weighted_score": 72.0
+    },
+    {
+      "basic_blocks": 5,
+      "instructions": {
+        "add": 2,
+        "alloca": 3,
+        "br": 4,
+        "getelementptr": 2,
+        "icmp": 1,
+        "load": 8,
+        "ret": 1,
+        "sext": 3,
+        "store": 5
+      },
+      "name": "matTrace",
+      "total_instructions": 29,
+      "weighted_score": 49.0
+    }
+  ],
+  "instructions": {
+    "add": 18,
+    "alloca": 33,
+    "br": 48,
+    "call": 13,
+    "getelementptr": 72,
+    "icmp": 12,
+    "load": 109,
+    "mul": 12,
+    "ret": 7,
+    "sext": 29,
+    "srem": 2,
+    "store": 47,
+    "sub": 4
+  },
+  "loops": {
+    "det3x3": [],
+    "main": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 41,
+        "is_innermost": false,
+        "weighted_score": 77.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 31,
+        "is_innermost": true,
+        "weighted_score": 61.0
+      }
+    ],
+    "matAdd": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 43,
+        "is_innermost": false,
+        "weighted_score": 72.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 33,
+        "is_innermost": true,
+        "weighted_score": 56.0
+      }
+    ],
+    "matMultiply": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 63,
+        "is_innermost": false,
+        "weighted_score": 108.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 53,
+        "is_innermost": false,
+        "weighted_score": 92.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_3",
+            "to": "header_3"
+          }
+        ],
+        "depth": 3,
+        "header": "header_3",
+        "instruction_count": 35,
+        "is_innermost": true,
+        "weighted_score": 61.0
+      }
+    ],
+    "matScale": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 36,
+        "is_innermost": false,
+        "weighted_score": 62.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 26,
+        "is_innermost": true,
+        "weighted_score": 46.0
+      }
+    ],
+    "matTrace": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 20,
+        "is_innermost": true,
+        "weighted_score": 33.0
+      }
+    ],
+    "matTranspose": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 34,
+        "is_innermost": false,
+        "weighted_score": 57.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 24,
+        "is_innermost": true,
+        "weighted_score": 41.0
+      }
+    ]
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test15.ll",
+  "opcode_sequence": {
+    "det3x3": [
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "mul",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "mul",
+      "sub",
+      "mul",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "mul",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "load",
+      "getelementptr",
+      "getelementptr",
+      "load",
+      "mul",
+      "sub",
+      "mul"
+    ],
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "add",
+      "srem",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "load",
+      "load",
+      "mul",
+      "add",
+      "srem",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "br",
+      "load"
+    ],
+    "matAdd": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "add",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "br",
+      "load"
+    ],
+    "matMultiply": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "mul",
+      "load"
+    ],
+    "matScale": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "load",
+      "mul",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "ret"
+    ],
+    "matTrace": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "matTranspose": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "ret"
+    ]
+  },
+  "total_instructions": 406,
+  "weighted_score": 830.0
+}

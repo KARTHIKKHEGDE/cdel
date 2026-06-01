@@ -1,0 +1,3037 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "lcs",
+        "caller": "main"
+      },
+      {
+        "callee": "editDistance",
+        "caller": "main"
+      },
+      {
+        "callee": "knapsack",
+        "caller": "main"
+      },
+      {
+        "callee": "coinChange",
+        "caller": "main"
+      },
+      {
+        "callee": "lis",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "lcs",
+      "editDistance",
+      "knapsack",
+      "coinChange",
+      "lis",
+      "main"
+    ]
+  },
+  "cfg": {
+    "coinChange": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb15",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "true"
+        },
+        {
+          "source": "bb7",
+          "target": "bb13",
+          "type": "false"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "true"
+        },
+        {
+          "source": "bb8",
+          "target": "bb11",
+          "type": "false"
+        },
+        {
+          "source": "bb9",
+          "target": "bb10",
+          "type": "true"
+        },
+        {
+          "source": "bb9",
+          "target": "bb11",
+          "type": "false"
+        },
+        {
+          "source": "bb10",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb12",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb12",
+          "target": "bb7",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb13",
+          "target": "bb14",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb14",
+          "target": "bb5",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb15",
+          "target": "bb16",
+          "type": "true"
+        },
+        {
+          "source": "bb15",
+          "target": "bb17",
+          "type": "false"
+        },
+        {
+          "source": "bb16",
+          "target": "bb18",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb17",
+          "target": "bb18",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 22,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "load",
+            "add",
+            "zext",
+            "call",
+            "store",
+            "alloca",
+            "store",
+            "getelementptr",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 7,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "add",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 2,
+          "label": "bb4",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 2,
+          "label": "bb6",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 8,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 17,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 16,
+          "label": "bb10",
+          "ops": [
+            "load",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 1,
+          "label": "bb11",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 4,
+          "label": "bb12",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb13",
+          "instructions": 1,
+          "label": "bb13",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb14",
+          "instructions": 4,
+          "label": "bb14",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb15",
+          "instructions": 7,
+          "label": "bb15",
+          "ops": [
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb16",
+          "instructions": 1,
+          "label": "bb16",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb17",
+          "instructions": 5,
+          "label": "bb17",
+          "ops": [
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb18",
+          "instructions": 4,
+          "label": "bb18",
+          "ops": [
+            "phi",
+            "load",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "editDistance": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb5",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb9",
+          "target": "bb10",
+          "type": "true"
+        },
+        {
+          "source": "bb9",
+          "target": "bb28",
+          "type": "false"
+        },
+        {
+          "source": "bb10",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb12",
+          "type": "true"
+        },
+        {
+          "source": "bb11",
+          "target": "bb26",
+          "type": "false"
+        },
+        {
+          "source": "bb12",
+          "target": "bb13",
+          "type": "true"
+        },
+        {
+          "source": "bb12",
+          "target": "bb14",
+          "type": "false"
+        },
+        {
+          "source": "bb13",
+          "target": "bb24",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb14",
+          "target": "bb15",
+          "type": "true"
+        },
+        {
+          "source": "bb14",
+          "target": "bb19",
+          "type": "false"
+        },
+        {
+          "source": "bb15",
+          "target": "bb16",
+          "type": "true"
+        },
+        {
+          "source": "bb15",
+          "target": "bb17",
+          "type": "false"
+        },
+        {
+          "source": "bb16",
+          "target": "bb18",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb17",
+          "target": "bb18",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb18",
+          "target": "bb23",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb19",
+          "target": "bb20",
+          "type": "true"
+        },
+        {
+          "source": "bb19",
+          "target": "bb21",
+          "type": "false"
+        },
+        {
+          "source": "bb20",
+          "target": "bb22",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb21",
+          "target": "bb22",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb22",
+          "target": "bb23",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb23",
+          "target": "bb24",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb24",
+          "target": "bb25",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb25",
+          "target": "bb11",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb26",
+          "target": "bb27",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb27",
+          "target": "bb9",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 38,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "call",
+            "trunc",
+            "store",
+            "load",
+            "call",
+            "trunc",
+            "store",
+            "load",
+            "add",
+            "zext",
+            "load",
+            "add",
+            "zext",
+            "call",
+            "store",
+            "mul",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 8,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 2,
+          "label": "bb4",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 8,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 2,
+          "label": "bb8",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 4,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 2,
+          "label": "bb10",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 4,
+          "label": "bb11",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 16,
+          "label": "bb12",
+          "ops": [
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb13",
+          "instructions": 19,
+          "label": "bb13",
+          "ops": [
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb14",
+          "instructions": 38,
+          "label": "bb14",
+          "ops": [
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "store",
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "store",
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "store",
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb15",
+          "instructions": 4,
+          "label": "bb15",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb16",
+          "instructions": 2,
+          "label": "bb16",
+          "ops": [
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb17",
+          "instructions": 2,
+          "label": "bb17",
+          "ops": [
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb18",
+          "instructions": 2,
+          "label": "bb18",
+          "ops": [
+            "phi",
+            "br"
+          ]
+        },
+        {
+          "id": "bb19",
+          "instructions": 4,
+          "label": "bb19",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb20",
+          "instructions": 2,
+          "label": "bb20",
+          "ops": [
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb21",
+          "instructions": 2,
+          "label": "bb21",
+          "ops": [
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb22",
+          "instructions": 2,
+          "label": "bb22",
+          "ops": [
+            "phi",
+            "br"
+          ]
+        },
+        {
+          "id": "bb23",
+          "instructions": 10,
+          "label": "bb23",
+          "ops": [
+            "phi",
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb24",
+          "instructions": 1,
+          "label": "bb24",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb25",
+          "instructions": 4,
+          "label": "bb25",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb26",
+          "instructions": 1,
+          "label": "bb26",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb27",
+          "instructions": 4,
+          "label": "bb27",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb28",
+          "instructions": 11,
+          "label": "bb28",
+          "ops": [
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "knapsack": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb18",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb16",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "false"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb7",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb14",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "true"
+        },
+        {
+          "source": "bb7",
+          "target": "bb12",
+          "type": "false"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "true"
+        },
+        {
+          "source": "bb8",
+          "target": "bb10",
+          "type": "false"
+        },
+        {
+          "source": "bb9",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb10",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb13",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb12",
+          "target": "bb13",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb13",
+          "target": "bb14",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb14",
+          "target": "bb15",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb15",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb16",
+          "target": "bb17",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb17",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 27,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "store",
+            "load",
+            "add",
+            "zext",
+            "load",
+            "add",
+            "zext",
+            "call",
+            "store",
+            "mul",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 3,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 3,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 9,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 9,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 34,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 10,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 24,
+          "label": "bb10",
+          "ops": [
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 10,
+          "label": "bb11",
+          "ops": [
+            "phi",
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 18,
+          "label": "bb12",
+          "ops": [
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb13",
+          "instructions": 1,
+          "label": "bb13",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb14",
+          "instructions": 1,
+          "label": "bb14",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb15",
+          "instructions": 4,
+          "label": "bb15",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb16",
+          "instructions": 1,
+          "label": "bb16",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb17",
+          "instructions": 4,
+          "label": "bb17",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb18",
+          "instructions": 11,
+          "label": "bb18",
+          "ops": [
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "lcs": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb18",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb16",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "false"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb7",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb14",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "true"
+        },
+        {
+          "source": "bb7",
+          "target": "bb9",
+          "type": "false"
+        },
+        {
+          "source": "bb8",
+          "target": "bb13",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb9",
+          "target": "bb10",
+          "type": "true"
+        },
+        {
+          "source": "bb9",
+          "target": "bb11",
+          "type": "false"
+        },
+        {
+          "source": "bb10",
+          "target": "bb12",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb12",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb12",
+          "target": "bb13",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb13",
+          "target": "bb14",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb14",
+          "target": "bb15",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb15",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb16",
+          "target": "bb17",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb17",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 33,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "call",
+            "trunc",
+            "store",
+            "load",
+            "call",
+            "trunc",
+            "store",
+            "load",
+            "add",
+            "zext",
+            "load",
+            "add",
+            "zext",
+            "call",
+            "store",
+            "mul",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 3,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 3,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 9,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 16,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "load",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "sext",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 20,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 20,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 10,
+          "label": "bb10",
+          "ops": [
+            "load",
+            "sub",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 10,
+          "label": "bb11",
+          "ops": [
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sub",
+            "sext",
+            "getelementptr",
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 10,
+          "label": "bb12",
+          "ops": [
+            "phi",
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb13",
+          "instructions": 1,
+          "label": "bb13",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb14",
+          "instructions": 1,
+          "label": "bb14",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb15",
+          "instructions": 4,
+          "label": "bb15",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb16",
+          "instructions": 1,
+          "label": "bb16",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb17",
+          "instructions": 4,
+          "label": "bb17",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb18",
+          "instructions": 11,
+          "label": "bb18",
+          "ops": [
+            "load",
+            "sext",
+            "mul",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "lis": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb15",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "true"
+        },
+        {
+          "source": "bb7",
+          "target": "bb13",
+          "type": "false"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "true"
+        },
+        {
+          "source": "bb8",
+          "target": "bb11",
+          "type": "false"
+        },
+        {
+          "source": "bb9",
+          "target": "bb10",
+          "type": "true"
+        },
+        {
+          "source": "bb9",
+          "target": "bb11",
+          "type": "false"
+        },
+        {
+          "source": "bb10",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb12",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb12",
+          "target": "bb7",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb13",
+          "target": "bb14",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb14",
+          "target": "bb5",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb15",
+          "target": "bb16",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb16",
+          "target": "bb17",
+          "type": "true"
+        },
+        {
+          "source": "bb16",
+          "target": "bb21",
+          "type": "false"
+        },
+        {
+          "source": "bb17",
+          "target": "bb18",
+          "type": "true"
+        },
+        {
+          "source": "bb17",
+          "target": "bb19",
+          "type": "false"
+        },
+        {
+          "source": "bb18",
+          "target": "bb19",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb19",
+          "target": "bb20",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb20",
+          "target": "bb16",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 19,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "zext",
+            "call",
+            "store",
+            "alloca",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 5,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 2,
+          "label": "bb4",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 2,
+          "label": "bb6",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 12,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 11,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 10,
+          "label": "bb10",
+          "ops": [
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "add",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 1,
+          "label": "bb11",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 4,
+          "label": "bb12",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb13",
+          "instructions": 1,
+          "label": "bb13",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb14",
+          "instructions": 4,
+          "label": "bb14",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb15",
+          "instructions": 3,
+          "label": "bb15",
+          "ops": [
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb16",
+          "instructions": 4,
+          "label": "bb16",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb17",
+          "instructions": 7,
+          "label": "bb17",
+          "ops": [
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb18",
+          "instructions": 6,
+          "label": "bb18",
+          "ops": [
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb19",
+          "instructions": 1,
+          "label": "bb19",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb20",
+          "instructions": 4,
+          "label": "bb20",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb21",
+          "instructions": 4,
+          "label": "bb21",
+          "ops": [
+            "load",
+            "load",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 25,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "call",
+            "call",
+            "call",
+            "call",
+            "call",
+            "call",
+            "getelementptr",
+            "getelementptr",
+            "call",
+            "call",
+            "call",
+            "getelementptr",
+            "call",
+            "call",
+            "call",
+            "getelementptr",
+            "call",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call"
+    ],
+    "bottleneck_score": 280.0,
+    "memory_pressure_score": 1346.0,
+    "per_function": {
+      "coinChange": {
+        "execution_estimate": 281.0,
+        "memory_pressure": 216.0
+      },
+      "editDistance": {
+        "execution_estimate": 495.0,
+        "memory_pressure": 347.0
+      },
+      "knapsack": {
+        "execution_estimate": 411.0,
+        "memory_pressure": 293.0
+      },
+      "lcs": {
+        "execution_estimate": 392.0,
+        "memory_pressure": 258.0
+      },
+      "lis": {
+        "execution_estimate": 284.0,
+        "memory_pressure": 219.0
+      },
+      "main": {
+        "execution_estimate": 154.0,
+        "memory_pressure": 13.0
+      }
+    },
+    "total_execution_estimate": 2017.0
+  },
+  "cyclomatic_complexity": {
+    "coinChange": {
+      "complexity": 7,
+      "components": 1,
+      "edges": 24,
+      "nodes": 19
+    },
+    "editDistance": {
+      "complexity": 9,
+      "components": 1,
+      "edges": 36,
+      "nodes": 29
+    },
+    "knapsack": {
+      "complexity": 7,
+      "components": 1,
+      "edges": 24,
+      "nodes": 19
+    },
+    "lcs": {
+      "complexity": 7,
+      "components": 1,
+      "edges": 24,
+      "nodes": 19
+    },
+    "lis": {
+      "complexity": 8,
+      "components": 1,
+      "edges": 28,
+      "nodes": 22
+    },
+    "main": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 29,
+      "instructions": {
+        "add": 9,
+        "alloca": 15,
+        "br": 28,
+        "call": 4,
+        "getelementptr": 20,
+        "icmp": 8,
+        "load": 56,
+        "mul": 10,
+        "phi": 3,
+        "ret": 1,
+        "sext": 20,
+        "store": 22,
+        "sub": 8,
+        "trunc": 2,
+        "zext": 2
+      },
+      "name": "editDistance",
+      "total_instructions": 208,
+      "weighted_score": 384.0
+    },
+    {
+      "basic_blocks": 19,
+      "instructions": {
+        "add": 6,
+        "alloca": 10,
+        "br": 18,
+        "call": 2,
+        "getelementptr": 23,
+        "icmp": 6,
+        "load": 51,
+        "mul": 10,
+        "phi": 1,
+        "ret": 1,
+        "sext": 23,
+        "store": 14,
+        "sub": 12,
+        "zext": 2
+      },
+      "name": "knapsack",
+      "total_instructions": 179,
+      "weighted_score": 319.0
+    },
+    {
+      "basic_blocks": 19,
+      "instructions": {
+        "add": 5,
+        "alloca": 10,
+        "br": 18,
+        "call": 4,
+        "getelementptr": 20,
+        "icmp": 6,
+        "load": 43,
+        "mul": 10,
+        "phi": 1,
+        "ret": 1,
+        "sext": 22,
+        "store": 14,
+        "sub": 8,
+        "trunc": 2,
+        "zext": 2
+      },
+      "name": "lcs",
+      "total_instructions": 166,
+      "weighted_score": 313.0
+    },
+    {
+      "basic_blocks": 19,
+      "instructions": {
+        "add": 7,
+        "alloca": 9,
+        "br": 18,
+        "call": 2,
+        "getelementptr": 11,
+        "icmp": 6,
+        "load": 35,
+        "phi": 1,
+        "ret": 1,
+        "sext": 10,
+        "store": 14,
+        "sub": 2,
+        "zext": 1
+      },
+      "name": "coinChange",
+      "total_instructions": 117,
+      "weighted_score": 209.0
+    },
+    {
+      "basic_blocks": 22,
+      "instructions": {
+        "add": 6,
+        "alloca": 10,
+        "br": 21,
+        "call": 2,
+        "getelementptr": 9,
+        "icmp": 7,
+        "load": 34,
+        "ret": 1,
+        "sext": 9,
+        "store": 16,
+        "zext": 1
+      },
+      "name": "lis",
+      "total_instructions": 116,
+      "weighted_score": 209.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 5,
+        "call": 14,
+        "getelementptr": 4,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "main",
+      "total_instructions": 25,
+      "weighted_score": 157.0
+    }
+  ],
+  "instructions": {
+    "add": 33,
+    "alloca": 59,
+    "br": 103,
+    "call": 28,
+    "getelementptr": 87,
+    "icmp": 33,
+    "load": 219,
+    "mul": 30,
+    "phi": 6,
+    "ret": 6,
+    "sext": 84,
+    "store": 81,
+    "sub": 30,
+    "trunc": 4,
+    "zext": 8
+  },
+  "loops": {
+    "coinChange": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 61,
+        "is_innermost": false,
+        "weighted_score": 99.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 50,
+        "is_innermost": true,
+        "weighted_score": 81.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 15,
+        "is_innermost": true,
+        "weighted_score": 25.0
+      }
+    ],
+    "editDistance": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 123,
+        "is_innermost": false,
+        "weighted_score": 203.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 112,
+        "is_innermost": true,
+        "weighted_score": 185.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 16,
+        "is_innermost": true,
+        "weighted_score": 29.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 16,
+        "is_innermost": true,
+        "weighted_score": 29.0
+      }
+    ],
+    "knapsack": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 141,
+        "is_innermost": false,
+        "weighted_score": 235.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 130,
+        "is_innermost": true,
+        "weighted_score": 217.0
+      }
+    ],
+    "lcs": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 122,
+        "is_innermost": false,
+        "weighted_score": 203.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 111,
+        "is_innermost": true,
+        "weighted_score": 185.0
+      }
+    ],
+    "lis": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 53,
+        "is_innermost": false,
+        "weighted_score": 86.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 42,
+        "is_innermost": true,
+        "weighted_score": 68.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 22,
+        "is_innermost": true,
+        "weighted_score": 36.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 13,
+        "is_innermost": true,
+        "weighted_score": 22.0
+      }
+    ],
+    "main": []
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test17.ll",
+  "opcode_sequence": {
+    "coinChange": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "load",
+      "add",
+      "zext",
+      "call",
+      "store",
+      "alloca",
+      "store",
+      "getelementptr",
+      "store",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "add",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load"
+    ],
+    "editDistance": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "call",
+      "trunc",
+      "store",
+      "load",
+      "call",
+      "trunc",
+      "store",
+      "load",
+      "add",
+      "zext",
+      "load",
+      "add",
+      "zext",
+      "call",
+      "store",
+      "mul",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "mul",
+      "getelementptr",
+      "getelementptr",
+      "store",
+      "br"
+    ],
+    "knapsack": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "store",
+      "load",
+      "add",
+      "zext",
+      "load",
+      "add",
+      "zext",
+      "call",
+      "store",
+      "mul",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "sext",
+      "mul",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr"
+    ],
+    "lcs": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "call",
+      "trunc",
+      "store",
+      "load",
+      "call",
+      "trunc",
+      "store",
+      "load",
+      "add",
+      "zext",
+      "load",
+      "add",
+      "zext",
+      "call",
+      "store",
+      "mul",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load"
+    ],
+    "lis": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "zext",
+      "call",
+      "store",
+      "alloca",
+      "store",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "load"
+    ],
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "call",
+      "call",
+      "call",
+      "call",
+      "call",
+      "call",
+      "getelementptr",
+      "getelementptr",
+      "call",
+      "call",
+      "call",
+      "getelementptr",
+      "call",
+      "call",
+      "call",
+      "getelementptr",
+      "call",
+      "call",
+      "ret"
+    ]
+  },
+  "total_instructions": 811,
+  "weighted_score": 1591.0
+}

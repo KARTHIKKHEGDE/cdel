@@ -1,0 +1,11 @@
+Function,Instruction,Count,Weight,Score
+main,br,11,1.0,11.0
+main,load,7,2.0,14.0
+main,store,6,3.0,18.0
+main,alloca,4,1.0,4.0
+main,call,4,10.0,40.0
+main,icmp,4,1.0,4.0
+main,add,1,1.0,1.0
+main,ret,1,1.0,1.0
+main,sdiv,1,5.0,5.0
+main,srem,1,5.0,5.0

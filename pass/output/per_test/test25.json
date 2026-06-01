@@ -1,0 +1,2234 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "rbFull",
+        "caller": "rbPush"
+      },
+      {
+        "callee": "rbEmpty",
+        "caller": "rbPop"
+      },
+      {
+        "callee": "vmPush",
+        "caller": "vmExecute"
+      },
+      {
+        "callee": "vmPop",
+        "caller": "vmExecute"
+      },
+      {
+        "callee": "rbInit",
+        "caller": "main"
+      },
+      {
+        "callee": "rbPush",
+        "caller": "main"
+      },
+      {
+        "callee": "rbPop",
+        "caller": "main"
+      },
+      {
+        "callee": "vmInit",
+        "caller": "main"
+      },
+      {
+        "callee": "vmExecute",
+        "caller": "main"
+      },
+      {
+        "callee": "countSetBits",
+        "caller": "main"
+      },
+      {
+        "callee": "isPowerOfTwo",
+        "caller": "main"
+      },
+      {
+        "callee": "simpleChecksum",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "rbInit",
+      "rbEmpty",
+      "rbFull",
+      "rbPush",
+      "rbPop",
+      "vmInit",
+      "vmPush",
+      "vmPop",
+      "vmExecute",
+      "countSetBits",
+      "isPowerOfTwo",
+      "reverseBits",
+      "simpleChecksum",
+      "main"
+    ]
+  },
+  "cfg": {
+    "countSetBits": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 5,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 9,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "and",
+            "load",
+            "add",
+            "store",
+            "load",
+            "lshr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "isPowerOfTwo": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 5,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 7,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "sub",
+            "and",
+            "icmp",
+            "xor",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 3,
+          "label": "bb2",
+          "ops": [
+            "phi",
+            "zext",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb7",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb5",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 13,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 4,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "mul",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 2,
+          "label": "bb4",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 3,
+          "label": "bb5",
+          "ops": [
+            "call",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 5,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 37,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "call",
+            "call",
+            "call",
+            "getelementptr",
+            "call",
+            "call",
+            "call",
+            "call",
+            "call",
+            "call",
+            "icmp",
+            "zext",
+            "select",
+            "call",
+            "call",
+            "icmp",
+            "zext",
+            "select",
+            "call",
+            "store",
+            "store",
+            "load",
+            "load",
+            "load",
+            "call",
+            "trunc",
+            "call",
+            "call",
+            "load",
+            "load",
+            "load",
+            "call",
+            "trunc",
+            "call",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "rbEmpty": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 8,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "zext",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "rbFull": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 8,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "zext",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "rbInit": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 12,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "store",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "rbPop": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 9,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "call",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 25,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "load",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "add",
+            "srem",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "add",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "rbPush": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 9,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "call",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 24,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "add",
+            "srem",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "add",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "reverseBits": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 7,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 10,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "shl",
+            "load",
+            "and",
+            "or",
+            "store",
+            "load",
+            "lshr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 2,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "simpleChecksum": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb11",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb9",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "true"
+        },
+        {
+          "source": "bb4",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb5",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb8",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb9",
+          "target": "bb10",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb10",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 10,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 11,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "zext",
+            "load",
+            "xor",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 3,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 4,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "and",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 5,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "lshr",
+            "xor",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 4,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "lshr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 1,
+          "label": "bb7",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 4,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 1,
+          "label": "bb9",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 4,
+          "label": "bb10",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 3,
+          "label": "bb11",
+          "ops": [
+            "load",
+            "xor",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "vmExecute": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb12",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb11",
+          "type": "true"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb5",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb7",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb9",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb10",
+          "type": "false"
+        },
+        {
+          "source": "bb3",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb4",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb6",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb8",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb9",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb10",
+          "target": "bb12",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 18,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 6,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "switch"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 10,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "load",
+            "load",
+            "add",
+            "store",
+            "sext",
+            "getelementptr",
+            "load",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 12,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "load",
+            "call",
+            "store",
+            "load",
+            "load",
+            "load",
+            "add",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 12,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "load",
+            "call",
+            "store",
+            "load",
+            "load",
+            "load",
+            "sub",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 12,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "load",
+            "call",
+            "store",
+            "load",
+            "load",
+            "load",
+            "mul",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 10,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "load",
+            "load",
+            "call",
+            "load",
+            "load",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 13,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "load",
+            "call",
+            "store",
+            "load",
+            "load",
+            "call",
+            "load",
+            "load",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 10,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "sext",
+            "getelementptr",
+            "load",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 1,
+          "label": "bb10",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 4,
+          "label": "bb11",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 1,
+          "label": "bb12",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    },
+    "vmInit": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "store",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "vmPop": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 13,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "add",
+            "store",
+            "sext",
+            "getelementptr",
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "vmPush": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 16,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "add",
+            "store",
+            "sext",
+            "getelementptr",
+            "store",
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call",
+      "srem"
+    ],
+    "bottleneck_score": 450.0,
+    "memory_pressure_score": 833.0,
+    "per_function": {
+      "countSetBits": {
+        "execution_estimate": 46.0,
+        "memory_pressure": 38.0
+      },
+      "isPowerOfTwo": {
+        "execution_estimate": 26.0,
+        "memory_pressure": 17.0
+      },
+      "main": {
+        "execution_estimate": 321.0,
+        "memory_pressure": 86.0
+      },
+      "rbEmpty": {
+        "execution_estimate": 17.0,
+        "memory_pressure": 14.0
+      },
+      "rbFull": {
+        "execution_estimate": 17.0,
+        "memory_pressure": 14.0
+      },
+      "rbInit": {
+        "execution_estimate": 33.0,
+        "memory_pressure": 32.0
+      },
+      "rbPop": {
+        "execution_estimate": 123.0,
+        "memory_pressure": 85.0
+      },
+      "rbPush": {
+        "execution_estimate": 119.0,
+        "memory_pressure": 81.0
+      },
+      "reverseBits": {
+        "execution_estimate": 62.0,
+        "memory_pressure": 51.0
+      },
+      "simpleChecksum": {
+        "execution_estimate": 123.0,
+        "memory_pressure": 98.0
+      },
+      "vmExecute": {
+        "execution_estimate": 443.0,
+        "memory_pressure": 238.0
+      },
+      "vmInit": {
+        "execution_estimate": 15.0,
+        "memory_pressure": 14.0
+      },
+      "vmPop": {
+        "execution_estimate": 31.0,
+        "memory_pressure": 28.0
+      },
+      "vmPush": {
+        "execution_estimate": 40.0,
+        "memory_pressure": 37.0
+      }
+    },
+    "total_execution_estimate": 1416.0
+  },
+  "cyclomatic_complexity": {
+    "countSetBits": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "isPowerOfTwo": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 3,
+      "nodes": 3
+    },
+    "main": {
+      "complexity": 3,
+      "components": 1,
+      "edges": 9,
+      "nodes": 8
+    },
+    "rbEmpty": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "rbFull": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "rbInit": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "rbPop": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "rbPush": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "reverseBits": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 5,
+      "nodes": 5
+    },
+    "simpleChecksum": {
+      "complexity": 4,
+      "components": 1,
+      "edges": 14,
+      "nodes": 12
+    },
+    "vmExecute": {
+      "complexity": 10,
+      "components": 1,
+      "edges": 21,
+      "nodes": 13
+    },
+    "vmInit": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "vmPop": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "vmPush": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 13,
+      "instructions": {
+        "add": 3,
+        "alloca": 13,
+        "br": 11,
+        "call": 18,
+        "getelementptr": 5,
+        "icmp": 1,
+        "load": 40,
+        "mul": 1,
+        "ret": 1,
+        "sext": 3,
+        "store": 15,
+        "sub": 1,
+        "switch": 1
+      },
+      "name": "vmExecute",
+      "total_instructions": 113,
+      "weighted_score": 353.0
+    },
+    {
+      "basic_blocks": 8,
+      "instructions": {
+        "add": 2,
+        "alloca": 9,
+        "br": 7,
+        "call": 21,
+        "getelementptr": 1,
+        "icmp": 4,
+        "load": 12,
+        "mul": 1,
+        "ret": 1,
+        "select": 2,
+        "store": 7,
+        "trunc": 2,
+        "zext": 2
+      },
+      "name": "main",
+      "total_instructions": 71,
+      "weighted_score": 291.0
+    },
+    {
+      "basic_blocks": 12,
+      "instructions": {
+        "add": 2,
+        "alloca": 5,
+        "and": 1,
+        "br": 11,
+        "getelementptr": 1,
+        "icmp": 3,
+        "load": 13,
+        "lshr": 2,
+        "ret": 1,
+        "sext": 1,
+        "store": 10,
+        "xor": 3,
+        "zext": 1
+      },
+      "name": "simpleChecksum",
+      "total_instructions": 54,
+      "weighted_score": 88.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "add": 2,
+        "alloca": 3,
+        "br": 3,
+        "call": 1,
+        "getelementptr": 6,
+        "icmp": 1,
+        "load": 12,
+        "ret": 1,
+        "sext": 1,
+        "srem": 1,
+        "store": 7
+      },
+      "name": "rbPop",
+      "total_instructions": 38,
+      "weighted_score": 83.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "add": 2,
+        "alloca": 3,
+        "br": 3,
+        "call": 1,
+        "getelementptr": 6,
+        "icmp": 1,
+        "load": 11,
+        "ret": 1,
+        "sext": 1,
+        "srem": 1,
+        "store": 7
+      },
+      "name": "rbPush",
+      "total_instructions": 37,
+      "weighted_score": 81.0
+    },
+    {
+      "basic_blocks": 5,
+      "instructions": {
+        "add": 1,
+        "alloca": 3,
+        "and": 1,
+        "br": 4,
+        "icmp": 1,
+        "load": 6,
+        "lshr": 1,
+        "or": 1,
+        "ret": 1,
+        "shl": 1,
+        "store": 6
+      },
+      "name": "reverseBits",
+      "total_instructions": 26,
+      "weighted_score": 44.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "add": 1,
+        "alloca": 2,
+        "and": 1,
+        "br": 3,
+        "icmp": 1,
+        "load": 5,
+        "lshr": 1,
+        "ret": 1,
+        "store": 4
+      },
+      "name": "countSetBits",
+      "total_instructions": 19,
+      "weighted_score": 32.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "add": 1,
+        "alloca": 2,
+        "getelementptr": 3,
+        "load": 4,
+        "ret": 1,
+        "sext": 1,
+        "store": 4
+      },
+      "name": "vmPush",
+      "total_instructions": 16,
+      "weighted_score": 31.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "getelementptr": 3,
+        "load": 3,
+        "ret": 1,
+        "store": 4
+      },
+      "name": "rbInit",
+      "total_instructions": 12,
+      "weighted_score": 26.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "add": 1,
+        "alloca": 1,
+        "getelementptr": 3,
+        "load": 4,
+        "ret": 1,
+        "sext": 1,
+        "store": 2
+      },
+      "name": "vmPop",
+      "total_instructions": 13,
+      "weighted_score": 24.0
+    },
+    {
+      "basic_blocks": 3,
+      "instructions": {
+        "alloca": 1,
+        "and": 1,
+        "br": 2,
+        "icmp": 2,
+        "load": 3,
+        "phi": 1,
+        "ret": 1,
+        "store": 1,
+        "sub": 1,
+        "xor": 1,
+        "zext": 1
+      },
+      "name": "isPowerOfTwo",
+      "total_instructions": 15,
+      "weighted_score": 20.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "getelementptr": 1,
+        "icmp": 1,
+        "load": 2,
+        "ret": 1,
+        "store": 1,
+        "zext": 1
+      },
+      "name": "rbEmpty",
+      "total_instructions": 8,
+      "weighted_score": 13.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "getelementptr": 1,
+        "icmp": 1,
+        "load": 2,
+        "ret": 1,
+        "store": 1,
+        "zext": 1
+      },
+      "name": "rbFull",
+      "total_instructions": 8,
+      "weighted_score": 13.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "getelementptr": 1,
+        "load": 1,
+        "ret": 1,
+        "store": 2
+      },
+      "name": "vmInit",
+      "total_instructions": 6,
+      "weighted_score": 12.0
+    }
+  ],
+  "instructions": {
+    "add": 15,
+    "alloca": 46,
+    "and": 4,
+    "br": 44,
+    "call": 41,
+    "getelementptr": 31,
+    "icmp": 16,
+    "load": 118,
+    "lshr": 4,
+    "mul": 2,
+    "or": 1,
+    "phi": 1,
+    "ret": 14,
+    "select": 2,
+    "sext": 8,
+    "shl": 1,
+    "srem": 2,
+    "store": 71,
+    "sub": 2,
+    "switch": 1,
+    "trunc": 2,
+    "xor": 4,
+    "zext": 6
+  },
+  "loops": {
+    "countSetBits": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 12,
+        "is_innermost": true,
+        "weighted_score": 20.0
+      }
+    ],
+    "isPowerOfTwo": [],
+    "main": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 11,
+        "is_innermost": true,
+        "weighted_score": 27.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 8,
+        "is_innermost": true,
+        "weighted_score": 21.0
+      }
+    ],
+    "rbEmpty": [],
+    "rbFull": [],
+    "rbInit": [],
+    "rbPop": [],
+    "rbPush": [],
+    "reverseBits": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 17,
+        "is_innermost": true,
+        "weighted_score": 28.0
+      }
+    ],
+    "simpleChecksum": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 41,
+        "is_innermost": false,
+        "weighted_score": 66.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_2",
+            "to": "header_2"
+          }
+        ],
+        "depth": 2,
+        "header": "header_2",
+        "instruction_count": 21,
+        "is_innermost": true,
+        "weighted_score": 32.0
+      }
+    ],
+    "vmExecute": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 93,
+        "is_innermost": true,
+        "weighted_score": 325.0
+      }
+    ],
+    "vmInit": [],
+    "vmPop": [],
+    "vmPush": []
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test25.ll",
+  "opcode_sequence": {
+    "countSetBits": [
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "and",
+      "load",
+      "add",
+      "store",
+      "load",
+      "lshr",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "isPowerOfTwo": [
+      "alloca",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sub",
+      "and",
+      "icmp",
+      "xor",
+      "br",
+      "phi",
+      "zext",
+      "ret"
+    ],
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "call",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "mul",
+      "call",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "store",
+      "br",
+      "call",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "call",
+      "call",
+      "call",
+      "getelementptr",
+      "call",
+      "call",
+      "call",
+      "call",
+      "call",
+      "call",
+      "icmp",
+      "zext",
+      "select",
+      "call",
+      "call"
+    ],
+    "rbEmpty": [
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "icmp",
+      "zext",
+      "ret"
+    ],
+    "rbFull": [
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "icmp",
+      "zext",
+      "ret"
+    ],
+    "rbInit": [
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "store",
+      "ret"
+    ],
+    "rbPop": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "call",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "load",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "add",
+      "srem",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "add",
+      "store",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "rbPush": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "call",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "getelementptr",
+      "load",
+      "getelementptr",
+      "load",
+      "sext",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "add",
+      "srem",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "add",
+      "store",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "reverseBits": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "shl",
+      "load",
+      "and",
+      "or",
+      "store",
+      "load",
+      "lshr",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "simpleChecksum": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "zext",
+      "load",
+      "xor",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "and",
+      "icmp",
+      "br",
+      "load",
+      "lshr",
+      "xor",
+      "store",
+      "br",
+      "load",
+      "lshr",
+      "store",
+      "br",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "br",
+      "load",
+      "add",
+      "store"
+    ],
+    "vmExecute": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "sext",
+      "getelementptr",
+      "load",
+      "switch",
+      "load",
+      "load",
+      "load",
+      "add",
+      "store",
+      "sext",
+      "getelementptr",
+      "load",
+      "call",
+      "br",
+      "load",
+      "call",
+      "store",
+      "load",
+      "call",
+      "store",
+      "load",
+      "load",
+      "load",
+      "add",
+      "call",
+      "br"
+    ],
+    "vmInit": [
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "store",
+      "ret"
+    ],
+    "vmPop": [
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "getelementptr",
+      "load",
+      "add",
+      "store",
+      "sext",
+      "getelementptr",
+      "load",
+      "ret"
+    ],
+    "vmPush": [
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "load",
+      "getelementptr",
+      "load",
+      "getelementptr",
+      "load",
+      "add",
+      "store",
+      "sext",
+      "getelementptr",
+      "store",
+      "ret"
+    ]
+  },
+  "total_instructions": 436,
+  "weighted_score": 1111.0
+}

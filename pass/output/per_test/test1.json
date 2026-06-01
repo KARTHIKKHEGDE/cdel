@@ -1,0 +1,208 @@
+{
+  "call_graph": {
+    "edges": [],
+    "nodes": [
+      "main"
+    ]
+  },
+  "cfg": {
+    "main": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 10,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "call",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 6,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "sext",
+            "load",
+            "mul",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 3,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call"
+    ],
+    "bottleneck_score": 30.0,
+    "memory_pressure_score": 48.0,
+    "per_function": {
+      "main": {
+        "execution_estimate": 89.0,
+        "memory_pressure": 48.0
+      }
+    },
+    "total_execution_estimate": 89.0
+  },
+  "cyclomatic_complexity": {
+    "main": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 5,
+      "nodes": 5
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 5,
+      "instructions": {
+        "add": 1,
+        "alloca": 4,
+        "br": 4,
+        "call": 3,
+        "icmp": 1,
+        "load": 6,
+        "mul": 1,
+        "ret": 1,
+        "sext": 1,
+        "store": 5
+      },
+      "name": "main",
+      "total_instructions": 27,
+      "weighted_score": 72.0
+    }
+  ],
+  "instructions": {
+    "add": 1,
+    "alloca": 4,
+    "br": 4,
+    "call": 3,
+    "icmp": 1,
+    "load": 6,
+    "mul": 1,
+    "ret": 1,
+    "sext": 1,
+    "store": 5
+  },
+  "loops": {
+    "main": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 14,
+        "is_innermost": true,
+        "weighted_score": 25.0
+      }
+    ]
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test1.ll",
+  "opcode_sequence": {
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "call",
+      "call",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "sext",
+      "load",
+      "mul",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "call",
+      "ret"
+    ]
+  },
+  "total_instructions": 27,
+  "weighted_score": 72.0
+}

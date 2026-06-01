@@ -1,0 +1,2536 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "height",
+        "caller": "getBalance"
+      },
+      {
+        "callee": "height",
+        "caller": "rightRotate"
+      },
+      {
+        "callee": "maxVal",
+        "caller": "rightRotate"
+      },
+      {
+        "callee": "height",
+        "caller": "leftRotate"
+      },
+      {
+        "callee": "maxVal",
+        "caller": "leftRotate"
+      },
+      {
+        "callee": "createBSTNode",
+        "caller": "avlInsert"
+      },
+      {
+        "callee": "avlInsert",
+        "caller": "avlInsert"
+      },
+      {
+        "callee": "height",
+        "caller": "avlInsert"
+      },
+      {
+        "callee": "maxVal",
+        "caller": "avlInsert"
+      },
+      {
+        "callee": "getBalance",
+        "caller": "avlInsert"
+      },
+      {
+        "callee": "rightRotate",
+        "caller": "avlInsert"
+      },
+      {
+        "callee": "leftRotate",
+        "caller": "avlInsert"
+      },
+      {
+        "callee": "bstSearch",
+        "caller": "bstSearch"
+      },
+      {
+        "callee": "inorder",
+        "caller": "inorder"
+      },
+      {
+        "callee": "countNodes",
+        "caller": "countNodes"
+      },
+      {
+        "callee": "getBalance",
+        "caller": "isBalanced"
+      },
+      {
+        "callee": "isBalanced",
+        "caller": "isBalanced"
+      },
+      {
+        "callee": "freeTree",
+        "caller": "freeTree"
+      },
+      {
+        "callee": "avlInsert",
+        "caller": "main"
+      },
+      {
+        "callee": "inorder",
+        "caller": "main"
+      },
+      {
+        "callee": "countNodes",
+        "caller": "main"
+      },
+      {
+        "callee": "height",
+        "caller": "main"
+      },
+      {
+        "callee": "isBalanced",
+        "caller": "main"
+      },
+      {
+        "callee": "bstSearch",
+        "caller": "main"
+      },
+      {
+        "callee": "freeTree",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "createBSTNode",
+      "height",
+      "maxVal",
+      "getBalance",
+      "rightRotate",
+      "leftRotate",
+      "avlInsert",
+      "bstSearch",
+      "inorder",
+      "countNodes",
+      "isBalanced",
+      "freeTree",
+      "main"
+    ]
+  },
+  "cfg": {
+    "avlInsert": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb21",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "true"
+        },
+        {
+          "source": "bb2",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb3",
+          "target": "bb8",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "true"
+        },
+        {
+          "source": "bb4",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb5",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb6",
+          "target": "bb21",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "true"
+        },
+        {
+          "source": "bb8",
+          "target": "bb11",
+          "type": "false"
+        },
+        {
+          "source": "bb9",
+          "target": "bb10",
+          "type": "true"
+        },
+        {
+          "source": "bb9",
+          "target": "bb11",
+          "type": "false"
+        },
+        {
+          "source": "bb10",
+          "target": "bb21",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb12",
+          "type": "true"
+        },
+        {
+          "source": "bb11",
+          "target": "bb14",
+          "type": "false"
+        },
+        {
+          "source": "bb12",
+          "target": "bb13",
+          "type": "true"
+        },
+        {
+          "source": "bb12",
+          "target": "bb14",
+          "type": "false"
+        },
+        {
+          "source": "bb13",
+          "target": "bb21",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb14",
+          "target": "bb15",
+          "type": "true"
+        },
+        {
+          "source": "bb14",
+          "target": "bb17",
+          "type": "false"
+        },
+        {
+          "source": "bb15",
+          "target": "bb16",
+          "type": "true"
+        },
+        {
+          "source": "bb15",
+          "target": "bb17",
+          "type": "false"
+        },
+        {
+          "source": "bb16",
+          "target": "bb21",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb17",
+          "target": "bb18",
+          "type": "true"
+        },
+        {
+          "source": "bb17",
+          "target": "bb20",
+          "type": "false"
+        },
+        {
+          "source": "bb18",
+          "target": "bb19",
+          "type": "true"
+        },
+        {
+          "source": "bb18",
+          "target": "bb20",
+          "type": "false"
+        },
+        {
+          "source": "bb19",
+          "target": "bb21",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb20",
+          "target": "bb21",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 9,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 6,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 9,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 6,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 9,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 3,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 1,
+          "label": "bb7",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 19,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "call",
+            "add",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "call",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 8,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 4,
+          "label": "bb10",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 3,
+          "label": "bb11",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 8,
+          "label": "bb12",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb13",
+          "instructions": 4,
+          "label": "bb13",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb14",
+          "instructions": 3,
+          "label": "bb14",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb15",
+          "instructions": 8,
+          "label": "bb15",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb16",
+          "instructions": 11,
+          "label": "bb16",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb17",
+          "instructions": 3,
+          "label": "bb17",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb18",
+          "instructions": 8,
+          "label": "bb18",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb19",
+          "instructions": 11,
+          "label": "bb19",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb20",
+          "instructions": 3,
+          "label": "bb20",
+          "ops": [
+            "load",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb21",
+          "instructions": 2,
+          "label": "bb21",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "bstSearch": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb6",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb5",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb6",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 8,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 6,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 3,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 6,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 7,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 7,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 2,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "countNodes": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 12,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "add",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "createBSTNode": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 20,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "call",
+            "store",
+            "load",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "freeTree": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 5,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 1,
+          "label": "bb1",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 11,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 1,
+          "label": "bb3",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    },
+    "getBalance": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 5,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 10,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "sub",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 1,
+          "label": "bb2",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "phi",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "height": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 5,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 1,
+          "label": "bb2",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "phi",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "inorder": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 7,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 1,
+          "label": "bb1",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 15,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "load",
+            "load",
+            "add",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "load",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 1,
+          "label": "bb3",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    },
+    "isBalanced": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb8",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "false"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb5",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb8",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb7",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 7,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 6,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 3,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 2,
+          "label": "bb4",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 6,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 6,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "phi",
+            "zext",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 2,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "leftRotate": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 48,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "store",
+            "load",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "call",
+            "add",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "call",
+            "add",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb1",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb10",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "true"
+        },
+        {
+          "source": "bb6",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb9",
+          "target": "bb5",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 10,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 6,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "call",
+            "srem",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 20,
+          "label": "bb4",
+          "ops": [
+            "store",
+            "load",
+            "call",
+            "load",
+            "call",
+            "load",
+            "call",
+            "call",
+            "load",
+            "call",
+            "call",
+            "load",
+            "call",
+            "icmp",
+            "zext",
+            "select",
+            "call",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 3,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 5,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "load",
+            "call",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 1,
+          "label": "bb8",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 4,
+          "label": "bb9",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 5,
+          "label": "bb10",
+          "ops": [
+            "load",
+            "call",
+            "load",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "maxVal": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 8,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "phi",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "rightRotate": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 48,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "store",
+            "load",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "call",
+            "add",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "call",
+            "add",
+            "load",
+            "getelementptr",
+            "store",
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call",
+      "srem"
+    ],
+    "bottleneck_score": 550.0,
+    "memory_pressure_score": 1041.0,
+    "per_function": {
+      "avlInsert": {
+        "execution_estimate": 469.0,
+        "memory_pressure": 305.0
+      },
+      "bstSearch": {
+        "execution_estimate": 117.0,
+        "memory_pressure": 87.0
+      },
+      "countNodes": {
+        "execution_estimate": 67.0,
+        "memory_pressure": 40.0
+      },
+      "createBSTNode": {
+        "execution_estimate": 65.0,
+        "memory_pressure": 54.0
+      },
+      "freeTree": {
+        "execution_estimate": 66.0,
+        "memory_pressure": 31.0
+      },
+      "getBalance": {
+        "execution_estimate": 53.0,
+        "memory_pressure": 27.0
+      },
+      "height": {
+        "execution_estimate": 23.0,
+        "memory_pressure": 18.0
+      },
+      "inorder": {
+        "execution_estimate": 78.0,
+        "memory_pressure": 52.0
+      },
+      "isBalanced": {
+        "execution_estimate": 106.0,
+        "memory_pressure": 61.0
+      },
+      "leftRotate": {
+        "execution_estimate": 180.0,
+        "memory_pressure": 117.0
+      },
+      "main": {
+        "execution_estimate": 277.0,
+        "memory_pressure": 106.0
+      },
+      "maxVal": {
+        "execution_estimate": 31.0,
+        "memory_pressure": 26.0
+      },
+      "rightRotate": {
+        "execution_estimate": 180.0,
+        "memory_pressure": 117.0
+      }
+    },
+    "total_execution_estimate": 1712.0
+  },
+  "cyclomatic_complexity": {
+    "avlInsert": {
+      "complexity": 12,
+      "components": 1,
+      "edges": 32,
+      "nodes": 22
+    },
+    "bstSearch": {
+      "complexity": 4,
+      "components": 1,
+      "edges": 9,
+      "nodes": 7
+    },
+    "countNodes": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "createBSTNode": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "freeTree": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "getBalance": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "height": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "inorder": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "isBalanced": {
+      "complexity": 5,
+      "components": 1,
+      "edges": 12,
+      "nodes": 9
+    },
+    "leftRotate": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "main": {
+      "complexity": 4,
+      "components": 1,
+      "edges": 13,
+      "nodes": 11
+    },
+    "maxVal": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "rightRotate": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 22,
+      "instructions": {
+        "add": 1,
+        "alloca": 4,
+        "br": 21,
+        "call": 13,
+        "getelementptr": 21,
+        "icmp": 11,
+        "load": 55,
+        "ret": 1,
+        "store": 15
+      },
+      "name": "avlInsert",
+      "total_instructions": 142,
+      "weighted_score": 365.0
+    },
+    {
+      "basic_blocks": 11,
+      "instructions": {
+        "add": 3,
+        "alloca": 6,
+        "br": 10,
+        "call": 13,
+        "icmp": 4,
+        "load": 15,
+        "ret": 1,
+        "select": 1,
+        "srem": 1,
+        "store": 10,
+        "zext": 1
+      },
+      "name": "main",
+      "total_instructions": 65,
+      "weighted_score": 222.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "add": 2,
+        "alloca": 3,
+        "call": 6,
+        "getelementptr": 10,
+        "load": 19,
+        "ret": 1,
+        "store": 7
+      },
+      "name": "rightRotate",
+      "total_instructions": 48,
+      "weighted_score": 145.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "add": 2,
+        "alloca": 3,
+        "call": 6,
+        "getelementptr": 10,
+        "load": 19,
+        "ret": 1,
+        "store": 7
+      },
+      "name": "leftRotate",
+      "total_instructions": 48,
+      "weighted_score": 145.0
+    },
+    {
+      "basic_blocks": 7,
+      "instructions": {
+        "alloca": 3,
+        "br": 6,
+        "call": 2,
+        "getelementptr": 4,
+        "icmp": 3,
+        "load": 15,
+        "ret": 1,
+        "store": 5
+      },
+      "name": "bstSearch",
+      "total_instructions": 39,
+      "weighted_score": 86.0
+    },
+    {
+      "basic_blocks": 9,
+      "instructions": {
+        "alloca": 3,
+        "br": 8,
+        "call": 3,
+        "getelementptr": 2,
+        "icmp": 5,
+        "load": 9,
+        "phi": 1,
+        "ret": 1,
+        "store": 5,
+        "zext": 1
+      },
+      "name": "isBalanced",
+      "total_instructions": 38,
+      "weighted_score": 86.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "add": 1,
+        "alloca": 2,
+        "br": 3,
+        "call": 2,
+        "getelementptr": 2,
+        "icmp": 1,
+        "load": 9,
+        "ret": 1,
+        "store": 3
+      },
+      "name": "inorder",
+      "total_instructions": 24,
+      "weighted_score": 59.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "alloca": 1,
+        "br": 3,
+        "call": 3,
+        "getelementptr": 2,
+        "icmp": 1,
+        "load": 6,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "freeTree",
+      "total_instructions": 18,
+      "weighted_score": 55.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "add": 2,
+        "alloca": 2,
+        "br": 3,
+        "call": 2,
+        "getelementptr": 2,
+        "icmp": 1,
+        "load": 6,
+        "ret": 1,
+        "store": 3
+      },
+      "name": "countNodes",
+      "total_instructions": 22,
+      "weighted_score": 54.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 2,
+        "call": 1,
+        "getelementptr": 4,
+        "load": 6,
+        "ret": 1,
+        "store": 6
+      },
+      "name": "createBSTNode",
+      "total_instructions": 20,
+      "weighted_score": 51.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "alloca": 1,
+        "br": 3,
+        "call": 2,
+        "getelementptr": 2,
+        "icmp": 1,
+        "load": 5,
+        "phi": 1,
+        "ret": 1,
+        "store": 1,
+        "sub": 1
+      },
+      "name": "getBalance",
+      "total_instructions": 18,
+      "weighted_score": 45.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "alloca": 2,
+        "br": 3,
+        "icmp": 1,
+        "load": 4,
+        "phi": 1,
+        "ret": 1,
+        "store": 2
+      },
+      "name": "maxVal",
+      "total_instructions": 14,
+      "weighted_score": 22.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "alloca": 1,
+        "br": 3,
+        "getelementptr": 1,
+        "icmp": 1,
+        "load": 3,
+        "phi": 1,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "height",
+      "total_instructions": 12,
+      "weighted_score": 18.0
+    }
+  ],
+  "instructions": {
+    "add": 11,
+    "alloca": 33,
+    "br": 63,
+    "call": 53,
+    "getelementptr": 60,
+    "icmp": 29,
+    "load": 171,
+    "phi": 4,
+    "ret": 13,
+    "select": 1,
+    "srem": 1,
+    "store": 66,
+    "sub": 1,
+    "zext": 2
+  },
+  "loops": {
+    "avlInsert": [],
+    "bstSearch": [],
+    "countNodes": [],
+    "createBSTNode": [],
+    "freeTree": [],
+    "getBalance": [],
+    "height": [],
+    "inorder": [],
+    "isBalanced": [],
+    "leftRotate": [],
+    "main": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 13,
+        "is_innermost": true,
+        "weighted_score": 42.0
+      },
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 17,
+        "is_innermost": true,
+        "weighted_score": 35.0
+      }
+    ],
+    "maxVal": [],
+    "rightRotate": []
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test14.ll",
+  "opcode_sequence": {
+    "avlInsert": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "call",
+      "store",
+      "br",
+      "load",
+      "load",
+      "getelementptr",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "load",
+      "call",
+      "load",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "load",
+      "getelementptr",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "load",
+      "call",
+      "load",
+      "getelementptr",
+      "store",
+      "br",
+      "load",
+      "store",
+      "br",
+      "br",
+      "load",
+      "getelementptr",
+      "load"
+    ],
+    "bstSearch": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "store",
+      "br",
+      "load",
+      "load",
+      "getelementptr",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "load",
+      "call",
+      "store",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "load",
+      "call",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "countNodes": [
+      "alloca",
+      "alloca",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "add",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "add",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "createBSTNode": [
+      "alloca",
+      "alloca",
+      "store",
+      "call",
+      "store",
+      "load",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "ret"
+    ],
+    "freeTree": [
+      "alloca",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "load",
+      "call",
+      "br",
+      "ret"
+    ],
+    "getBalance": [
+      "alloca",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "sub",
+      "br",
+      "br",
+      "phi",
+      "ret"
+    ],
+    "height": [
+      "alloca",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "br",
+      "br",
+      "phi",
+      "ret"
+    ],
+    "inorder": [
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "load",
+      "call",
+      "load",
+      "load",
+      "add",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "load",
+      "call",
+      "br",
+      "ret"
+    ],
+    "isBalanced": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "call",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "icmp",
+      "br",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "icmp",
+      "br",
+      "phi",
+      "zext",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "leftRotate": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "store",
+      "load",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "call",
+      "add",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "call",
+      "add",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "ret"
+    ],
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "call",
+      "srem",
+      "call",
+      "store",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "store",
+      "load",
+      "call",
+      "load",
+      "call",
+      "load",
+      "call",
+      "call",
+      "load",
+      "call",
+      "call",
+      "load",
+      "call",
+      "icmp",
+      "zext",
+      "select",
+      "call",
+      "store",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "call",
+      "icmp"
+    ],
+    "maxVal": [
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "br",
+      "load",
+      "br",
+      "phi",
+      "ret"
+    ],
+    "rightRotate": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "store",
+      "load",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "call",
+      "add",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "call",
+      "add",
+      "load",
+      "getelementptr",
+      "store",
+      "load",
+      "ret"
+    ]
+  },
+  "total_instructions": 508,
+  "weighted_score": 1353.0
+}

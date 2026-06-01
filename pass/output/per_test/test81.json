@@ -1,0 +1,326 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "compute_math_81",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "compute_math_81",
+      "main"
+    ]
+  },
+  "cfg": {
+    "compute_math_81": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "true"
+        },
+        {
+          "source": "bb2",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb1",
+          "type": "back_edge"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 7,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 4,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 18,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "sitofp",
+            "load",
+            "sitofp",
+            "fadd",
+            "fdiv",
+            "load",
+            "sitofp",
+            "load",
+            "call",
+            "store",
+            "load",
+            "fmul",
+            "store",
+            "load",
+            "srem",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 4,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "fsub",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 1,
+          "label": "bb4",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 3,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 4,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call",
+      "srem",
+      "fdiv"
+    ],
+    "bottleneck_score": 65.0,
+    "memory_pressure_score": 80.0,
+    "per_function": {
+      "compute_math_81": {
+        "execution_estimate": 162.0,
+        "memory_pressure": 75.0
+      },
+      "main": {
+        "execution_estimate": 16.0,
+        "memory_pressure": 5.0
+      }
+    },
+    "total_execution_estimate": 178.0
+  },
+  "cyclomatic_complexity": {
+    "compute_math_81": {
+      "complexity": 3,
+      "components": 1,
+      "edges": 8,
+      "nodes": 7
+    },
+    "main": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 7,
+      "instructions": {
+        "add": 1,
+        "alloca": 3,
+        "br": 6,
+        "call": 2,
+        "fadd": 1,
+        "fdiv": 1,
+        "fmul": 1,
+        "fsub": 1,
+        "icmp": 2,
+        "load": 11,
+        "ret": 1,
+        "sitofp": 3,
+        "srem": 1,
+        "store": 7
+      },
+      "name": "compute_math_81",
+      "total_instructions": 41,
+      "weighted_score": 103.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "call": 1,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "main",
+      "total_instructions": 4,
+      "weighted_score": 15.0
+    }
+  ],
+  "instructions": {
+    "add": 1,
+    "alloca": 4,
+    "br": 6,
+    "call": 3,
+    "fadd": 1,
+    "fdiv": 1,
+    "fmul": 1,
+    "fsub": 1,
+    "icmp": 2,
+    "load": 11,
+    "ret": 2,
+    "sitofp": 3,
+    "srem": 1,
+    "store": 8
+  },
+  "loops": {
+    "compute_math_81": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 31,
+        "is_innermost": true,
+        "weighted_score": 77.0
+      }
+    ],
+    "main": []
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test81.ll",
+  "opcode_sequence": {
+    "compute_math_81": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "br",
+      "load",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "sitofp",
+      "load",
+      "sitofp",
+      "fadd",
+      "fdiv",
+      "load",
+      "sitofp",
+      "load",
+      "call",
+      "store",
+      "load",
+      "fmul",
+      "store",
+      "load",
+      "srem",
+      "icmp",
+      "br",
+      "load",
+      "fsub",
+      "store",
+      "br",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "call",
+      "ret"
+    ],
+    "main": [
+      "alloca",
+      "store",
+      "call",
+      "ret"
+    ]
+  },
+  "total_instructions": 45,
+  "weighted_score": 118.0
+}

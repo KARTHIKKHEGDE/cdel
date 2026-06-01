@@ -1,0 +1,335 @@
+{
+  "call_graph": {
+    "edges": [],
+    "nodes": [
+      "main"
+    ]
+  },
+  "cfg": {
+    "main": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "true"
+        },
+        {
+          "source": "bb3",
+          "target": "bb8",
+          "type": "false"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "true"
+        },
+        {
+          "source": "bb4",
+          "target": "bb6",
+          "type": "false"
+        },
+        {
+          "source": "bb5",
+          "target": "bb8",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb7",
+          "target": "bb3",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "true"
+        },
+        {
+          "source": "bb8",
+          "target": "bb10",
+          "type": "false"
+        },
+        {
+          "source": "bb9",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb10",
+          "target": "bb11",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 11,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "call",
+            "call",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 5,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "load",
+            "sdiv",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 5,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "load",
+            "srem",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 2,
+          "label": "bb5",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 1,
+          "label": "bb6",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 4,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 3,
+          "label": "bb8",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 2,
+          "label": "bb9",
+          "ops": [
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 2,
+          "label": "bb10",
+          "ops": [
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 1,
+          "label": "bb11",
+          "ops": [
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call",
+      "sdiv",
+      "srem"
+    ],
+    "bottleneck_score": 80.0,
+    "memory_pressure_score": 56.0,
+    "per_function": {
+      "main": {
+        "execution_estimate": 153.0,
+        "memory_pressure": 56.0
+      }
+    },
+    "total_execution_estimate": 153.0
+  },
+  "cyclomatic_complexity": {
+    "main": {
+      "complexity": 5,
+      "components": 1,
+      "edges": 15,
+      "nodes": 12
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 12,
+      "instructions": {
+        "add": 1,
+        "alloca": 4,
+        "br": 11,
+        "call": 4,
+        "icmp": 4,
+        "load": 7,
+        "ret": 1,
+        "sdiv": 1,
+        "srem": 1,
+        "store": 6
+      },
+      "name": "main",
+      "total_instructions": 40,
+      "weighted_score": 103.0
+    }
+  ],
+  "instructions": {
+    "add": 1,
+    "alloca": 4,
+    "br": 11,
+    "call": 4,
+    "icmp": 4,
+    "load": 7,
+    "ret": 1,
+    "sdiv": 1,
+    "srem": 1,
+    "store": 6
+  },
+  "loops": {
+    "main": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 15,
+        "is_innermost": true,
+        "weighted_score": 30.0
+      }
+    ]
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test2.ll",
+  "opcode_sequence": {
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "call",
+      "call",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "sdiv",
+      "icmp",
+      "br",
+      "load",
+      "load",
+      "srem",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "call",
+      "br",
+      "call",
+      "br",
+      "ret"
+    ]
+  },
+  "total_instructions": 40,
+  "weighted_score": 103.0
+}

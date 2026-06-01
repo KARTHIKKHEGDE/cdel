@@ -1,0 +1,428 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "factorial",
+        "caller": "factorial"
+      },
+      {
+        "callee": "fib",
+        "caller": "fib"
+      },
+      {
+        "callee": "hypotenuse",
+        "caller": "main"
+      },
+      {
+        "callee": "factorial",
+        "caller": "main"
+      },
+      {
+        "callee": "fib",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "hypotenuse",
+      "factorial",
+      "fib",
+      "main"
+    ]
+  },
+  "cfg": {
+    "factorial": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 7,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "load",
+            "sub",
+            "call",
+            "mul",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "fib": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb2",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 9,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "sub",
+            "call",
+            "load",
+            "sub",
+            "call",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 2,
+          "label": "bb3",
+          "ops": [
+            "load",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "hypotenuse": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 12,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "load",
+            "load",
+            "load",
+            "fmul",
+            "call",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 9,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "call",
+            "call",
+            "call",
+            "call",
+            "call",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call"
+    ],
+    "bottleneck_score": 110.0,
+    "memory_pressure_score": 95.0,
+    "per_function": {
+      "factorial": {
+        "execution_estimate": 49.0,
+        "memory_pressure": 30.0
+      },
+      "fib": {
+        "execution_estimate": 62.0,
+        "memory_pressure": 34.0
+      },
+      "hypotenuse": {
+        "execution_estimate": 52.0,
+        "memory_pressure": 26.0
+      },
+      "main": {
+        "execution_estimate": 66.0,
+        "memory_pressure": 5.0
+      }
+    },
+    "total_execution_estimate": 229.0
+  },
+  "cyclomatic_complexity": {
+    "factorial": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "fib": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 4,
+      "nodes": 4
+    },
+    "hypotenuse": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "main": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "call": 6,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "main",
+      "total_instructions": 9,
+      "weighted_score": 65.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "add": 1,
+        "alloca": 2,
+        "br": 3,
+        "call": 2,
+        "icmp": 1,
+        "load": 5,
+        "ret": 1,
+        "store": 3,
+        "sub": 2
+      },
+      "name": "fib",
+      "total_instructions": 20,
+      "weighted_score": 49.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 2,
+        "call": 2,
+        "fmul": 1,
+        "load": 4,
+        "ret": 1,
+        "store": 2
+      },
+      "name": "hypotenuse",
+      "total_instructions": 12,
+      "weighted_score": 41.0
+    },
+    {
+      "basic_blocks": 4,
+      "instructions": {
+        "alloca": 2,
+        "br": 3,
+        "call": 1,
+        "icmp": 1,
+        "load": 4,
+        "mul": 1,
+        "ret": 1,
+        "store": 3,
+        "sub": 1
+      },
+      "name": "factorial",
+      "total_instructions": 17,
+      "weighted_score": 38.0
+    }
+  ],
+  "instructions": {
+    "add": 1,
+    "alloca": 7,
+    "br": 6,
+    "call": 11,
+    "fmul": 1,
+    "icmp": 2,
+    "load": 13,
+    "mul": 1,
+    "ret": 4,
+    "store": 9,
+    "sub": 3
+  },
+  "loops": {
+    "factorial": [],
+    "fib": [],
+    "hypotenuse": [],
+    "main": []
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/functions.ll",
+  "opcode_sequence": {
+    "factorial": [
+      "alloca",
+      "alloca",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "store",
+      "br",
+      "load",
+      "load",
+      "sub",
+      "call",
+      "mul",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "fib": [
+      "alloca",
+      "alloca",
+      "store",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "store",
+      "br",
+      "load",
+      "sub",
+      "call",
+      "load",
+      "sub",
+      "call",
+      "add",
+      "store",
+      "br",
+      "load",
+      "ret"
+    ],
+    "hypotenuse": [
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "load",
+      "load",
+      "load",
+      "fmul",
+      "call",
+      "call",
+      "ret"
+    ],
+    "main": [
+      "alloca",
+      "store",
+      "call",
+      "call",
+      "call",
+      "call",
+      "call",
+      "call",
+      "ret"
+    ]
+  },
+  "total_instructions": 58,
+  "weighted_score": 193.0
+}

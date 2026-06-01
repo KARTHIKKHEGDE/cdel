@@ -1,0 +1,226 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "_ZN4Demo3addEii",
+        "caller": "main"
+      },
+      {
+        "callee": "_ZN4Demo3addEdd",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "main",
+      "_ZN4Demo3addEii",
+      "_ZN4Demo3addEdd"
+    ]
+  },
+  "cfg": {
+    "_ZN4Demo3addEdd": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 11,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "load",
+            "load",
+            "load",
+            "fadd",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "_ZN4Demo3addEii": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 11,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "store",
+            "load",
+            "load",
+            "load",
+            "add",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 9,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "store",
+            "call",
+            "call",
+            "call",
+            "call",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call"
+    ],
+    "bottleneck_score": 50.0,
+    "memory_pressure_score": 60.0,
+    "per_function": {
+      "_ZN4Demo3addEdd": {
+        "execution_estimate": 32.0,
+        "memory_pressure": 27.0
+      },
+      "_ZN4Demo3addEii": {
+        "execution_estimate": 29.0,
+        "memory_pressure": 27.0
+      },
+      "main": {
+        "execution_estimate": 57.0,
+        "memory_pressure": 6.0
+      }
+    },
+    "total_execution_estimate": 118.0
+  },
+  "cyclomatic_complexity": {
+    "_ZN4Demo3addEdd": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "_ZN4Demo3addEii": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "main": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 2,
+        "call": 5,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "main",
+      "total_instructions": 9,
+      "weighted_score": 56.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 3,
+        "fadd": 1,
+        "load": 3,
+        "ret": 1,
+        "store": 3
+      },
+      "name": "_ZN4Demo3addEdd",
+      "total_instructions": 11,
+      "weighted_score": 21.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "add": 1,
+        "alloca": 3,
+        "load": 3,
+        "ret": 1,
+        "store": 3
+      },
+      "name": "_ZN4Demo3addEii",
+      "total_instructions": 11,
+      "weighted_score": 20.0
+    }
+  ],
+  "instructions": {
+    "add": 1,
+    "alloca": 8,
+    "call": 5,
+    "fadd": 1,
+    "load": 6,
+    "ret": 3,
+    "store": 7
+  },
+  "loops": {
+    "_ZN4Demo3addEdd": [],
+    "_ZN4Demo3addEii": [],
+    "main": []
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test7.ll",
+  "opcode_sequence": {
+    "_ZN4Demo3addEdd": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "load",
+      "load",
+      "load",
+      "fadd",
+      "ret"
+    ],
+    "_ZN4Demo3addEii": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "store",
+      "load",
+      "load",
+      "load",
+      "add",
+      "ret"
+    ],
+    "main": [
+      "alloca",
+      "alloca",
+      "store",
+      "call",
+      "call",
+      "call",
+      "call",
+      "call",
+      "ret"
+    ]
+  },
+  "total_instructions": 31,
+  "weighted_score": 97.0
+}

@@ -1,0 +1,382 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "_ZN7StudentC2Ev",
+        "caller": "main"
+      },
+      {
+        "callee": "_ZN7Student7displayEv",
+        "caller": "main"
+      },
+      {
+        "callee": "_ZN7StudentD2Ev",
+        "caller": "main"
+      }
+    ],
+    "nodes": [
+      "main",
+      "_ZN7StudentC2Ev",
+      "_ZN7Student7displayEv",
+      "_ZN7StudentD2Ev"
+    ]
+  },
+  "cfg": {
+    "_ZN7Student7displayEv": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 13,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "call",
+            "getelementptr",
+            "call",
+            "call",
+            "call",
+            "getelementptr",
+            "load",
+            "call",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "_ZN7StudentC2Ev": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "_ZN7StudentD2Ev": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "getelementptr",
+            "call",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb3",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "false"
+        },
+        {
+          "source": "bb3",
+          "target": "bb4",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 8,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "call",
+            "getelementptr",
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "getelementptr",
+            "store",
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 4,
+          "label": "bb2",
+          "ops": [
+            "store",
+            "call",
+            "load",
+            "ret"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 7,
+          "label": "bb3",
+          "ops": [
+            "landingpad",
+            "extractvalue",
+            "store",
+            "extractvalue",
+            "store",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 5,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "load",
+            "insertvalue",
+            "insertvalue",
+            "resume"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call",
+      "invoke"
+    ],
+    "bottleneck_score": 130.0,
+    "memory_pressure_score": 73.0,
+    "per_function": {
+      "_ZN7Student7displayEv": {
+        "execution_estimate": 76.0,
+        "memory_pressure": 15.0
+      },
+      "_ZN7StudentC2Ev": {
+        "execution_estimate": 21.0,
+        "memory_pressure": 10.0
+      },
+      "_ZN7StudentD2Ev": {
+        "execution_estimate": 21.0,
+        "memory_pressure": 10.0
+      },
+      "main": {
+        "execution_estimate": 96.0,
+        "memory_pressure": 38.0
+      }
+    },
+    "total_execution_estimate": 214.0
+  },
+  "cyclomatic_complexity": {
+    "_ZN7Student7displayEv": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "_ZN7StudentC2Ev": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "_ZN7StudentD2Ev": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "main": {
+      "complexity": 2,
+      "components": 1,
+      "edges": 5,
+      "nodes": 5
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 5,
+      "instructions": {
+        "alloca": 4,
+        "br": 1,
+        "call": 3,
+        "extractvalue": 2,
+        "getelementptr": 2,
+        "insertvalue": 2,
+        "invoke": 2,
+        "landingpad": 1,
+        "load": 3,
+        "resume": 1,
+        "ret": 1,
+        "store": 5
+      },
+      "name": "main",
+      "total_instructions": 27,
+      "weighted_score": 92.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "call": 6,
+        "getelementptr": 2,
+        "load": 2,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "_ZN7Student7displayEv",
+      "total_instructions": 13,
+      "weighted_score": 73.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "call": 1,
+        "getelementptr": 1,
+        "load": 1,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "_ZN7StudentC2Ev",
+      "total_instructions": 6,
+      "weighted_score": 19.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "call": 1,
+        "getelementptr": 1,
+        "load": 1,
+        "ret": 1,
+        "store": 1
+      },
+      "name": "_ZN7StudentD2Ev",
+      "total_instructions": 6,
+      "weighted_score": 19.0
+    }
+  ],
+  "instructions": {
+    "alloca": 7,
+    "br": 1,
+    "call": 11,
+    "extractvalue": 2,
+    "getelementptr": 6,
+    "insertvalue": 2,
+    "invoke": 2,
+    "landingpad": 1,
+    "load": 7,
+    "resume": 1,
+    "ret": 4,
+    "store": 8
+  },
+  "loops": {
+    "_ZN7Student7displayEv": [],
+    "_ZN7StudentC2Ev": [],
+    "_ZN7StudentD2Ev": [],
+    "main": []
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test5.ll",
+  "opcode_sequence": {
+    "_ZN7Student7displayEv": [
+      "alloca",
+      "store",
+      "load",
+      "call",
+      "getelementptr",
+      "call",
+      "call",
+      "call",
+      "getelementptr",
+      "load",
+      "call",
+      "call",
+      "ret"
+    ],
+    "_ZN7StudentC2Ev": [
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "call",
+      "ret"
+    ],
+    "_ZN7StudentD2Ev": [
+      "alloca",
+      "store",
+      "load",
+      "getelementptr",
+      "call",
+      "ret"
+    ],
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "call",
+      "getelementptr",
+      "invoke",
+      "getelementptr",
+      "store",
+      "invoke",
+      "store",
+      "call",
+      "load",
+      "ret",
+      "landingpad",
+      "extractvalue",
+      "store",
+      "extractvalue",
+      "store",
+      "call",
+      "br",
+      "load",
+      "load",
+      "insertvalue",
+      "insertvalue",
+      "resume"
+    ]
+  },
+  "total_instructions": 52,
+  "weighted_score": 203.0
+}

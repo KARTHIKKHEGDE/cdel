@@ -1,0 +1,946 @@
+{
+  "call_graph": {
+    "edges": [
+      {
+        "callee": "_ZN8Child_68C2Ev",
+        "caller": "main"
+      },
+      {
+        "callee": "_ZN8Child_686doWorkEi",
+        "caller": "main"
+      },
+      {
+        "callee": "__clang_call_terminate",
+        "caller": "main"
+      },
+      {
+        "callee": "_ZN9Object_68C2Ev",
+        "caller": "_ZN8Child_68C2Ev"
+      },
+      {
+        "callee": "_ZN9Object_686doWorkEi",
+        "caller": "_ZN8Child_686doWorkEi"
+      }
+    ],
+    "nodes": [
+      "main",
+      "_ZN8Child_68C2Ev",
+      "_ZN8Child_686doWorkEi",
+      "__clang_call_terminate",
+      "_ZN9Object_68C2Ev",
+      "_ZN9Object_686doWorkEi"
+    ]
+  },
+  "cfg": {
+    "_ZN8Child_686doWorkEi": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "false"
+        },
+        {
+          "source": "bb3",
+          "target": "bb5",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 11,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "load",
+            "srem",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "call",
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "call",
+            "unreachable"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 7,
+          "label": "bb3",
+          "ops": [
+            "landingpad",
+            "extractvalue",
+            "store",
+            "extractvalue",
+            "store",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 3,
+          "label": "bb4",
+          "ops": [
+            "load",
+            "call",
+            "ret"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 5,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "load",
+            "insertvalue",
+            "insertvalue",
+            "resume"
+          ]
+        }
+      ]
+    },
+    "_ZN8Child_68C2Ev": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 6,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "call",
+            "store",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "_ZN9Object_686doWorkEi": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "true"
+        },
+        {
+          "source": "bb0",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb3",
+          "type": "false"
+        },
+        {
+          "source": "bb3",
+          "target": "bb5",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 11,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "store",
+            "load",
+            "load",
+            "srem",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 2,
+          "label": "bb1",
+          "ops": [
+            "call",
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "call",
+            "unreachable"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 7,
+          "label": "bb3",
+          "ops": [
+            "landingpad",
+            "extractvalue",
+            "store",
+            "extractvalue",
+            "store",
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 5,
+          "label": "bb4",
+          "ops": [
+            "call",
+            "load",
+            "call",
+            "call",
+            "ret"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 5,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "load",
+            "insertvalue",
+            "insertvalue",
+            "resume"
+          ]
+        }
+      ]
+    },
+    "_ZN9Object_68C2Ev": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 5,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "store",
+            "load",
+            "store",
+            "ret"
+          ]
+        }
+      ]
+    },
+    "__clang_call_terminate": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 3,
+          "label": "bb0",
+          "ops": [
+            "call",
+            "call",
+            "unreachable"
+          ]
+        }
+      ]
+    },
+    "main": {
+      "edges": [
+        {
+          "source": "bb0",
+          "target": "bb1",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb1",
+          "target": "bb2",
+          "type": "true"
+        },
+        {
+          "source": "bb1",
+          "target": "bb14",
+          "type": "false"
+        },
+        {
+          "source": "bb2",
+          "target": "bb3",
+          "type": "true"
+        },
+        {
+          "source": "bb2",
+          "target": "bb4",
+          "type": "false"
+        },
+        {
+          "source": "bb3",
+          "target": "bb10",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb4",
+          "target": "bb5",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb5",
+          "target": "bb6",
+          "type": "true"
+        },
+        {
+          "source": "bb5",
+          "target": "bb15",
+          "type": "false"
+        },
+        {
+          "source": "bb6",
+          "target": "bb7",
+          "type": "true"
+        },
+        {
+          "source": "bb6",
+          "target": "bb12",
+          "type": "false"
+        },
+        {
+          "source": "bb7",
+          "target": "bb8",
+          "type": "true"
+        },
+        {
+          "source": "bb7",
+          "target": "bb12",
+          "type": "false"
+        },
+        {
+          "source": "bb8",
+          "target": "bb9",
+          "type": "true"
+        },
+        {
+          "source": "bb8",
+          "target": "bb12",
+          "type": "false"
+        },
+        {
+          "source": "bb9",
+          "target": "bb10",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb10",
+          "target": "bb11",
+          "type": "unconditional"
+        },
+        {
+          "source": "bb11",
+          "target": "bb1",
+          "type": "back_edge"
+        },
+        {
+          "source": "bb12",
+          "target": "bb13",
+          "type": "true"
+        },
+        {
+          "source": "bb12",
+          "target": "bb16",
+          "type": "false"
+        },
+        {
+          "source": "bb13",
+          "target": "bb15",
+          "type": "unconditional"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "bb0",
+          "instructions": 10,
+          "label": "bb0",
+          "ops": [
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "alloca",
+            "store",
+            "call",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb1",
+          "instructions": 3,
+          "label": "bb1",
+          "ops": [
+            "load",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb2",
+          "instructions": 2,
+          "label": "bb2",
+          "ops": [
+            "load",
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb3",
+          "instructions": 1,
+          "label": "bb3",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb4",
+          "instructions": 6,
+          "label": "bb4",
+          "ops": [
+            "landingpad",
+            "extractvalue",
+            "store",
+            "extractvalue",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb5",
+          "instructions": 4,
+          "label": "bb5",
+          "ops": [
+            "load",
+            "call",
+            "icmp",
+            "br"
+          ]
+        },
+        {
+          "id": "bb6",
+          "instructions": 4,
+          "label": "bb6",
+          "ops": [
+            "load",
+            "call",
+            "store",
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb7",
+          "instructions": 6,
+          "label": "bb7",
+          "ops": [
+            "load",
+            "load",
+            "getelementptr",
+            "load",
+            "call",
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb8",
+          "instructions": 1,
+          "label": "bb8",
+          "ops": [
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb9",
+          "instructions": 2,
+          "label": "bb9",
+          "ops": [
+            "call",
+            "br"
+          ]
+        },
+        {
+          "id": "bb10",
+          "instructions": 1,
+          "label": "bb10",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb11",
+          "instructions": 4,
+          "label": "bb11",
+          "ops": [
+            "load",
+            "add",
+            "store",
+            "br"
+          ]
+        },
+        {
+          "id": "bb12",
+          "instructions": 6,
+          "label": "bb12",
+          "ops": [
+            "landingpad",
+            "extractvalue",
+            "store",
+            "extractvalue",
+            "store",
+            "invoke"
+          ]
+        },
+        {
+          "id": "bb13",
+          "instructions": 1,
+          "label": "bb13",
+          "ops": [
+            "br"
+          ]
+        },
+        {
+          "id": "bb14",
+          "instructions": 1,
+          "label": "bb14",
+          "ops": [
+            "ret"
+          ]
+        },
+        {
+          "id": "bb15",
+          "instructions": 5,
+          "label": "bb15",
+          "ops": [
+            "load",
+            "load",
+            "insertvalue",
+            "insertvalue",
+            "resume"
+          ]
+        },
+        {
+          "id": "bb16",
+          "instructions": 4,
+          "label": "bb16",
+          "ops": [
+            "landingpad",
+            "extractvalue",
+            "call",
+            "unreachable"
+          ]
+        }
+      ]
+    }
+  },
+  "cost_model": {
+    "bottleneck_instructions": [
+      "call",
+      "invoke",
+      "srem"
+    ],
+    "bottleneck_score": 300.0,
+    "memory_pressure_score": 185.0,
+    "per_function": {
+      "_ZN8Child_686doWorkEi": {
+        "execution_estimate": 120.0,
+        "memory_pressure": 40.0
+      },
+      "_ZN8Child_68C2Ev": {
+        "execution_estimate": 24.0,
+        "memory_pressure": 13.0
+      },
+      "_ZN9Object_686doWorkEi": {
+        "execution_estimate": 140.0,
+        "memory_pressure": 40.0
+      },
+      "_ZN9Object_68C2Ev": {
+        "execution_estimate": 14.0,
+        "memory_pressure": 13.0
+      },
+      "__clang_call_terminate": {
+        "execution_estimate": 20.0,
+        "memory_pressure": 0.0
+      },
+      "main": {
+        "execution_estimate": 213.0,
+        "memory_pressure": 79.0
+      }
+    },
+    "total_execution_estimate": 531.0
+  },
+  "cyclomatic_complexity": {
+    "_ZN8Child_686doWorkEi": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 5,
+      "nodes": 6
+    },
+    "_ZN8Child_68C2Ev": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "_ZN9Object_686doWorkEi": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 5,
+      "nodes": 6
+    },
+    "_ZN9Object_68C2Ev": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "__clang_call_terminate": {
+      "complexity": 1,
+      "components": 1,
+      "edges": 0,
+      "nodes": 1
+    },
+    "main": {
+      "complexity": 6,
+      "components": 1,
+      "edges": 21,
+      "nodes": 17
+    }
+  },
+  "functions": [
+    {
+      "basic_blocks": 17,
+      "instructions": {
+        "add": 1,
+        "alloca": 6,
+        "br": 9,
+        "call": 6,
+        "extractvalue": 5,
+        "getelementptr": 1,
+        "icmp": 2,
+        "insertvalue": 2,
+        "invoke": 5,
+        "landingpad": 3,
+        "load": 10,
+        "resume": 1,
+        "ret": 1,
+        "store": 8,
+        "unreachable": 1
+      },
+      "name": "main",
+      "total_instructions": 61,
+      "weighted_score": 193.0
+    },
+    {
+      "basic_blocks": 6,
+      "instructions": {
+        "alloca": 4,
+        "br": 2,
+        "call": 6,
+        "extractvalue": 2,
+        "icmp": 1,
+        "insertvalue": 2,
+        "invoke": 1,
+        "landingpad": 1,
+        "load": 5,
+        "resume": 1,
+        "ret": 1,
+        "srem": 1,
+        "store": 4,
+        "unreachable": 1
+      },
+      "name": "_ZN9Object_686doWorkEi",
+      "total_instructions": 32,
+      "weighted_score": 116.0
+    },
+    {
+      "basic_blocks": 6,
+      "instructions": {
+        "alloca": 4,
+        "br": 2,
+        "call": 4,
+        "extractvalue": 2,
+        "icmp": 1,
+        "insertvalue": 2,
+        "invoke": 1,
+        "landingpad": 1,
+        "load": 5,
+        "resume": 1,
+        "ret": 1,
+        "srem": 1,
+        "store": 4,
+        "unreachable": 1
+      },
+      "name": "_ZN8Child_686doWorkEi",
+      "total_instructions": 30,
+      "weighted_score": 96.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "call": 1,
+        "load": 1,
+        "ret": 1,
+        "store": 2
+      },
+      "name": "_ZN8Child_68C2Ev",
+      "total_instructions": 6,
+      "weighted_score": 20.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "call": 2,
+        "unreachable": 1
+      },
+      "name": "__clang_call_terminate",
+      "total_instructions": 3,
+      "weighted_score": 20.0
+    },
+    {
+      "basic_blocks": 1,
+      "instructions": {
+        "alloca": 1,
+        "load": 1,
+        "ret": 1,
+        "store": 2
+      },
+      "name": "_ZN9Object_68C2Ev",
+      "total_instructions": 5,
+      "weighted_score": 10.0
+    }
+  ],
+  "instructions": {
+    "add": 1,
+    "alloca": 16,
+    "br": 13,
+    "call": 19,
+    "extractvalue": 9,
+    "getelementptr": 1,
+    "icmp": 4,
+    "insertvalue": 6,
+    "invoke": 7,
+    "landingpad": 5,
+    "load": 22,
+    "resume": 3,
+    "ret": 5,
+    "srem": 2,
+    "store": 20,
+    "unreachable": 4
+  },
+  "loops": {
+    "_ZN8Child_686doWorkEi": [],
+    "_ZN8Child_68C2Ev": [],
+    "_ZN9Object_686doWorkEi": [],
+    "_ZN9Object_68C2Ev": [],
+    "__clang_call_terminate": [],
+    "main": [
+      {
+        "back_edges": [
+          {
+            "from": "latch_1",
+            "to": "header_1"
+          }
+        ],
+        "depth": 1,
+        "header": "header_1",
+        "instruction_count": 34,
+        "is_innermost": true,
+        "weighted_score": 124.0
+      }
+    ]
+  },
+  "module": "/home/karthik/llvm-project/pass/ir_files/test68.ll",
+  "opcode_sequence": {
+    "_ZN8Child_686doWorkEi": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "load",
+      "srem",
+      "icmp",
+      "br",
+      "call",
+      "invoke",
+      "call",
+      "unreachable",
+      "landingpad",
+      "extractvalue",
+      "store",
+      "extractvalue",
+      "store",
+      "call",
+      "br",
+      "load",
+      "call",
+      "ret",
+      "load",
+      "load",
+      "insertvalue",
+      "insertvalue",
+      "resume"
+    ],
+    "_ZN8Child_68C2Ev": [
+      "alloca",
+      "store",
+      "load",
+      "call",
+      "store",
+      "ret"
+    ],
+    "_ZN9Object_686doWorkEi": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "store",
+      "load",
+      "load",
+      "srem",
+      "icmp",
+      "br",
+      "call",
+      "invoke",
+      "call",
+      "unreachable",
+      "landingpad",
+      "extractvalue",
+      "store",
+      "extractvalue",
+      "store",
+      "call",
+      "br",
+      "call",
+      "load",
+      "call",
+      "call",
+      "ret",
+      "load",
+      "load",
+      "insertvalue",
+      "insertvalue",
+      "resume"
+    ],
+    "_ZN9Object_68C2Ev": [
+      "alloca",
+      "store",
+      "load",
+      "store",
+      "ret"
+    ],
+    "__clang_call_terminate": [
+      "call",
+      "call",
+      "unreachable"
+    ],
+    "main": [
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "alloca",
+      "store",
+      "call",
+      "store",
+      "br",
+      "load",
+      "icmp",
+      "br",
+      "load",
+      "invoke",
+      "br",
+      "landingpad",
+      "extractvalue",
+      "store",
+      "extractvalue",
+      "store",
+      "br",
+      "load",
+      "call",
+      "icmp",
+      "br",
+      "load",
+      "call",
+      "store",
+      "invoke",
+      "load",
+      "load",
+      "getelementptr",
+      "load",
+      "call",
+      "invoke",
+      "invoke",
+      "call",
+      "br",
+      "br",
+      "load",
+      "add",
+      "store",
+      "br",
+      "landingpad",
+      "extractvalue",
+      "store",
+      "extractvalue",
+      "store",
+      "invoke"
+    ]
+  },
+  "total_instructions": 137,
+  "weighted_score": 455.0
+}
