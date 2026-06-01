@@ -67,7 +67,7 @@ Open `http://localhost:3000` to view the UI. The API server runs at `http://loca
 - `./build.sh` - Standard build script to compile the LLVM pass.
 - `./run.sh` - Full execution script to compile, run tests, and start the dashboard.
 - `dashboard/` - React/Vite front-end and Express.js back-end for visualization.
-- `output_images/` - Generated images and visual demonstration artifacts.
+- `output_images/` - Screenshots of the output and visual demonstration artifacts.
 
 ## Documentation
 Please refer to the following documents in this repository for in-depth details:
